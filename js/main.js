@@ -139,6 +139,85 @@
   renderFooter();
   renderMobileCTA();
 
+  // ========= 3D ICON INJECTION =========
+  function injectIcon(elementId, iconFn, size) {
+    var el = document.getElementById(elementId);
+    if (el && iconFn) {
+      el.innerHTML = iconFn(size);
+    }
+  }
+
+  if (window.I3Icons) {
+    var icons = window.I3Icons;
+    var page = getActivePage();
+
+    if (page === 'home') {
+      injectIcon('hero-pump', icons.i3Pump, 260);
+      injectIcon('hero-coffee', icons.i3Coffee, 130);
+      injectIcon('hero-can', icons.i3Can, 110);
+      injectIcon('split-road-icon', icons.i3Road, 90);
+      injectIcon('split-bag-icon', icons.i3Bag, 100);
+      injectIcon('trip-coffee-icon', icons.i3Coffee, 100);
+      injectIcon('trip-bag-icon', icons.i3Bag, 100);
+      injectIcon('trip-road-icon', icons.i3Road, 100);
+    }
+
+    if (page === 'fuel') {
+      injectIcon('fuel-hero-icon', icons.i3Pump, 280);
+      injectIcon('svc-icon-air', icons.i3Air, 84);
+      injectIcon('svc-icon-propane', function(s) { return icons.i3Badge(s, 'bronze'); }, 84);
+      injectIcon('svc-icon-wash', icons.i3Pump, 84);
+      injectIcon('svc-icon-atm', icons.i3Card, 84);
+      injectIcon('quality-shield-icon', icons.i3Shield, 340);
+    }
+
+    if (page === 'store') {
+      // Store hero has multiple floating icons - inject into container
+      injectIcon('store-hero-icon', function(s) {
+        return '<div style="position:relative;min-height:320px;">' +
+          '<div style="position:absolute;top:10%;left:10%;transform:rotate(-6deg);">' + icons.i3Coffee(180) + '</div>' +
+          '<div style="position:absolute;top:30%;right:0;transform:rotate(8deg);">' + icons.i3Can(140) + '</div>' +
+          '<div style="position:absolute;bottom:0;left:25%;transform:rotate(4deg);">' + icons.i3Snack(150) + '</div>' +
+        '</div>';
+      }, null);
+
+      // Product icons
+      var prodIcons = [icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag, icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag];
+      for (var pi = 0; pi < prodIcons.length; pi++) {
+        injectIcon('prod-icon-' + pi, prodIcons[pi], 130);
+      }
+
+      // Category icons
+      var catIcons = [icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag, icons.i3Air, icons.i3Card];
+      for (var ci = 0; ci < catIcons.length; ci++) {
+        injectIcon('cat-icon-' + ci, catIcons[ci], 72);
+      }
+    }
+
+    if (page === 'deals') {
+      injectIcon('deals-hero-icon', function(s) { return icons.i3Badge(s, 'gold'); }, 280);
+
+      // Promo deal icons
+      var dealIcons = [icons.i3Pump, icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag, function(s) { return icons.i3Badge(s, 'gold'); }];
+      for (var di = 0; di < dealIcons.length; di++) {
+        injectIcon('deal-icon-' + di, dealIcons[di], 110);
+      }
+
+      // Tier badges
+      var tierTypes = ['bronze', 'silver', 'gold'];
+      for (var ti = 0; ti < tierTypes.length; ti++) {
+        (function(tier, idx) {
+          injectIcon('tier-badge-' + idx, function(s) { return icons.i3Badge(s, tier); }, 110);
+        })(tierTypes[ti], ti);
+      }
+    }
+
+    if (page === 'contact') {
+      injectIcon('contact-hero-icon', icons.i3Pin, 260);
+      injectIcon('map-pin-icon', icons.i3Pin, 80);
+    }
+  }
+
   // ========= MOBILE NAV =========
   function initMobileNav() {
     var navToggle = document.querySelector('.nav-toggle');
@@ -211,6 +290,37 @@
   } else {
     document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
       el.classList.add('is-visible');
+    });
+  }
+
+  // ========= SCROLL REVEAL (Design System) =========
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    // Stagger delays for [data-stagger] children
+    document.querySelectorAll('[data-stagger]').forEach(function (parent) {
+      var children = parent.querySelectorAll('.reveal');
+      children.forEach(function (child, i) {
+        child.style.setProperty('--reveal-delay', (i * 80) + 'ms');
+      });
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-in');
     });
   }
 
@@ -306,6 +416,18 @@
       row.classList.add('today');
     }
   });
+
+  // ========= HIGHLIGHT TODAY IN HOURS TABLE (new format) =========
+  var todayIdx = new Date().getDay(); // 0=Sun
+  var hoursTable = document.querySelector('.hours-table tbody');
+  if (hoursTable) {
+    var rows = hoursTable.querySelectorAll('tr');
+    rows.forEach(function (row, i) {
+      if (i === todayIdx) {
+        row.classList.add('is-today');
+      }
+    });
+  }
 
   // ========= CONTACT FORM =========
   var contactForm = document.querySelector('#contact-form');

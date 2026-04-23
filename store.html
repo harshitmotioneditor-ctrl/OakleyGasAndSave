@@ -17,6 +17,8 @@
   <meta property="og:locale" content="en_US">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/elevated.css">
+  <link rel="stylesheet" href="css/home-editorial.css">
 
   <!-- JSON-LD ConvenienceStore Schema -->
   <script type="application/ld+json">
@@ -83,260 +85,253 @@
 
   <main>
 
-  <!-- ========= HERO (Page Variant) ========= -->
-  <section class="hero hero-page" aria-labelledby="hero-heading">
-    <div class="hero::before"></div>
-    <div class="container">
-      <div class="hero-content animate-on-scroll">
-        <div class="status-bar status-bar--open" data-business-status>
-          <span class="status-dot"></span> Open Now
-        </div>
-        <h1 id="hero-heading">Fresh Drinks. <span class="highlight">Hot Food.</span> Daily Essentials.</h1>
-        <p class="hero-subtitle">Grab-and-go convenience for your morning commute, afternoon pick-me-up, or late-night run. Everything you need, right when you need it.</p>
-        <div class="hero-ctas">
-          <a href="deals.html" class="btn btn-primary btn-lg">Today's Deals</a>
-          <a href="contact.html" class="btn btn-secondary btn-lg">Get Directions</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= STORE OVERVIEW ========= -->
-  <section class="section" aria-labelledby="overview-heading">
-    <div class="container animate-on-scroll">
-      <span class="section-label">Our Store</span>
-      <h2 class="section-title" id="overview-heading">Fully Stocked. Always Ready.</h2>
-      <p class="section-subtitle mb-xl">Our convenience store is clean, well-organized, and packed with everything you need. From fresh hot coffee and cold drinks to quick meal options and household basics, we keep our shelves stocked and our coolers full so you never leave empty-handed. Whether you're fueling up your car or just yourself, we've got you covered.</p>
-    </div>
-  </section>
-
-  <!-- ========= PRODUCT CATEGORIES GRID ========= -->
-  <section class="section pt-0" aria-labelledby="categories-heading">
-    <div class="container">
-      <div class="animate-on-scroll">
-        <span class="section-label">What We Carry</span>
-        <h2 class="section-title mb-xl" id="categories-heading">Browse Our Categories</h2>
-      </div>
-
-      <div class="grid grid-4 stagger-children" role="list">
-
-        <!-- Coffee & Hot Drinks -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#9749;</div>
-            <h4>Coffee &amp; Hot Drinks</h4>
-            <p>Fresh brewed coffee, cappuccino, hot chocolate, and tea &mdash; served all day long.</p>
-          </div>
-        </div>
-
-        <!-- Cold Beverages -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#129380;</div>
-            <h4>Cold Beverages</h4>
-            <p>Sodas, juices, water, energy drinks, iced teas, and sports drinks &mdash; ice cold.</p>
-          </div>
-        </div>
-
-        <!-- Snacks & Chips -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#127871;</div>
-            <h4>Snacks &amp; Chips</h4>
-            <p>All your favorite chip brands, nuts, jerky, trail mix, and pretzels.</p>
-          </div>
-        </div>
-
-        <!-- Candy & Sweets -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#127852;</div>
-            <h4>Candy &amp; Sweets</h4>
-            <p>Chocolate bars, gummy candy, mints, gum, and sweet treats for every craving.</p>
-          </div>
-        </div>
-
-        <!-- Hot Food & Breakfast -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#127790;</div>
-            <h4>Hot Food &amp; Breakfast</h4>
-            <p>Hot dogs, taquitos, breakfast burritos, and roller grill items &mdash; ready to eat.</p>
-          </div>
-        </div>
-
-        <!-- Grocery Basics -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#128722;</div>
-            <h4>Grocery Basics</h4>
-            <p>Bread, milk, eggs, canned goods, and other essentials when you need them fast.</p>
-          </div>
-        </div>
-
-        <!-- Auto Essentials -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#128663;</div>
-            <h4>Auto Essentials</h4>
-            <p>Motor oil, wiper fluid, air fresheners, phone chargers, and roadside basics.</p>
-          </div>
-        </div>
-
-        <!-- Tobacco & Accessories -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#128684;</div>
-            <h4>Tobacco &amp; Accessories</h4>
-            <p>Cigarettes, cigars, rolling papers, and accessories. Valid ID required.</p>
-          </div>
-        </div>
-
-        <!-- Ice & Ice Cream -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#127846;</div>
-            <h4>Ice &amp; Ice Cream</h4>
-            <p>Bagged ice, ice cream bars, popsicles, and frozen treats to beat the heat.</p>
-          </div>
-        </div>
-
-        <!-- Lottery Tickets -->
-        <div class="glass-card category-card animate-on-scroll" role="listitem">
-          <div class="category-card-overlay"></div>
-          <div class="category-card-content">
-            <div class="service-card-icon" aria-hidden="true">&#127922;</div>
-            <h4>Lottery Tickets</h4>
-            <p>Scratchers, Powerball, Mega Millions, and more. Try your luck today.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= GRAB-AND-GO MESSAGING ========= -->
-  <section class="section" aria-labelledby="grabgo-heading">
-    <div class="container text-center animate-on-scroll">
-      <div class="cta-banner">
-        <span class="section-label">Quick &amp; Easy</span>
-        <h2 id="grabgo-heading">In and Out in Minutes.</h2>
-        <p>Everything you need between here and there. No long lines, no hassle &mdash; just fast, friendly service and a store designed to get you back on the road. Grab your coffee, pick up a snack, and keep moving.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= FEATURED PRODUCTS / ROTATING SPECIALS ========= -->
-  <section class="section" aria-labelledby="specials-heading">
-    <div class="container">
-      <div class="animate-on-scroll">
-        <span class="section-label">Featured Specials</span>
-        <h2 class="section-title mb-xl" id="specials-heading">Today's Best Deals</h2>
-      </div>
-
-      <div class="grid grid-3 stagger-children">
-
-        <!-- Special 1 -->
-        <div class="glass-card promo-card animate-on-scroll">
-          <div class="promo-card-badge">Hot Deal</div>
-          <div class="promo-card-content">
-            <h3>Fresh Brewed Coffee</h3>
-            <div class="promo-value">$1.49</div>
-            <p>Any size, any roast. Start your morning right with a hot cup of freshly brewed coffee.</p>
-            <span class="promo-terms">Available all day. While supplies last.</span>
-          </div>
-        </div>
-
-        <!-- Special 2 -->
-        <div class="glass-card promo-card animate-on-scroll">
-          <div class="promo-card-badge">Combo</div>
-          <div class="promo-card-content">
-            <h3>2 Hot Dogs</h3>
-            <div class="promo-value">$3.00</div>
-            <p>Two roller-grill hot dogs for just three bucks. Add a fountain drink for a dollar more.</p>
-            <span class="promo-terms">In-store only. Limited time offer.</span>
-          </div>
-        </div>
-
-        <!-- Special 3 -->
-        <div class="glass-card promo-card animate-on-scroll">
-          <div class="promo-card-badge">Bundle</div>
-          <div class="promo-card-content">
-            <h3>Energy Drink + Snack Combo</h3>
-            <div class="promo-value">$4.99</div>
-            <p>Grab any energy drink and a bag of chips or candy bar for one low price. Perfect fuel for the road.</p>
-            <span class="promo-terms">Select items only. See store for details.</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="text-center mt-xl animate-on-scroll">
-        <a href="deals.html" class="btn btn-outline">View All Deals &amp; Rewards</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= COMMUNITY CONVENIENCE ========= -->
-  <section class="section" aria-labelledby="community-heading">
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="animate-on-scroll">
-          <span class="section-label">Your Neighborhood Stop</span>
-          <h2 class="section-title" id="community-heading">Convenience for the Oakley Community</h2>
-          <p class="section-subtitle mb-lg">We're more than just a gas station store &mdash; we're a daily stop for the people who make Oakley home. Located near Main Street and Laurel Road, we're the quick stop that fits into your routine.</p>
-        </div>
-        <div class="animate-on-scroll">
-          <div class="grid grid-2 stagger-children">
-            <div class="glass-card animate-on-scroll">
-              <div class="service-card-icon" aria-hidden="true">&#128652;</div>
-              <h4>Highway 4 Commuters</h4>
-              <p style="color: var(--text-secondary); font-size: var(--text-sm);">Coffee and breakfast before you hit the road. We open early so you don't have to detour.</p>
-            </div>
-            <div class="glass-card animate-on-scroll">
-              <div class="service-card-icon" aria-hidden="true">&#127979;</div>
-              <h4>School Run Parents</h4>
-              <p style="color: var(--text-secondary); font-size: var(--text-sm);">Quick drinks and snacks for the kids on the way to school. Fast lane, no wait.</p>
-            </div>
-            <div class="glass-card animate-on-scroll">
-              <div class="service-card-icon" aria-hidden="true">&#128119;</div>
-              <h4>Construction Crews</h4>
-              <p style="color: var(--text-secondary); font-size: var(--text-sm);">Hot food, cold drinks, and ice for the job site. We see you early and keep things ready.</p>
-            </div>
-            <div class="glass-card animate-on-scroll">
-              <div class="service-card-icon" aria-hidden="true">&#128106;</div>
-              <h4>Local Families</h4>
-              <p style="color: var(--text-secondary); font-size: var(--text-sm);">Forgot the milk? Need ice for the party? We've got the essentials right around the corner.</p>
+    <!-- ========= PAGE HERO ========= -->
+    <section class="page-hero" aria-labelledby="hero-heading">
+      <div class="page-hero__bg"></div>
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="reveal">
+            <span class="page-hero__kicker">Convenience Store</span>
+            <h1 id="hero-heading">Stocked, bright, <em>built for speed</em>.</h1>
+            <p class="lead">Everything from fresh-brewed coffee and ice-cold drinks to hot food and daily essentials &mdash; organized, clean, and ready the moment you walk in. No hunting, no waiting.</p>
+            <div class="hero-ctas" style="margin-top:var(--space-xl);">
+              <a href="contact.html" class="btn btn-primary btn-lg">Get Directions</a>
+              <a href="deals.html" class="btn btn-secondary btn-lg">See Deals</a>
             </div>
           </div>
+          <div class="page-hero__icon reveal" style="--reveal-delay:200ms;">
+            <div id="store-hero-icon"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========= CTA BANNER ========= -->
-  <section class="section" aria-labelledby="cta-heading">
-    <div class="container animate-on-scroll">
-      <div class="cta-banner">
-        <span class="section-label">We're Open</span>
-        <h2 id="cta-heading">Stop In Today</h2>
-        <p>Fresh coffee's brewing, the coolers are stocked, and the hot food is ready. Swing by on your way through Oakley &mdash; we'll get you in and out fast.</p>
-        <div class="flex flex-wrap" style="justify-content: center;">
-          <a href="contact.html" class="btn btn-primary btn-lg">Visit Us</a>
-          <a href="deals.html" class="btn btn-secondary btn-lg">View Deals</a>
+    <!-- ========= PRODUCT GRID ========= -->
+    <section class="ed-section" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="ed-head reveal">
+          <div>
+            <span class="ed-eyebrow">What We Carry</span>
+            <h2 class="ed-display" id="products-heading">Grab &amp; go <em>favorites</em></h2>
+          </div>
+          <div class="ed-head__right">
+            <p class="ed-lead">From your morning coffee to that late-night snack run, our shelves stay stocked with everything you actually need.</p>
+          </div>
+        </div>
+
+        <div class="prod-grid">
+
+          <!-- Product 0: House Roast -->
+          <div class="prod-card reveal" style="--reveal-delay:0ms;">
+            <span class="prod-card__tag">Hot</span>
+            <div class="prod-card__stage" id="prod-icon-0"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">House Roast</div>
+              <div class="prod-card__desc">Fresh brewed, any size, all day long.</div>
+              <div class="prod-card__price">$2.49</div>
+            </div>
+          </div>
+
+          <!-- Product 1: Energy Pack -->
+          <div class="prod-card reveal" style="--reveal-delay:60ms;">
+            <span class="prod-card__tag prod-card__tag--teal">Cold</span>
+            <div class="prod-card__stage" id="prod-icon-1"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Energy Pack</div>
+              <div class="prod-card__desc">Top energy drink brands, ice cold and ready.</div>
+              <div class="prod-card__price">$3.99</div>
+            </div>
+          </div>
+
+          <!-- Product 2: Classic Chips -->
+          <div class="prod-card reveal" style="--reveal-delay:120ms;">
+            <span class="prod-card__tag">Local</span>
+            <div class="prod-card__stage" id="prod-icon-2"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Classic Chips</div>
+              <div class="prod-card__desc">All the brands you love, always in stock.</div>
+              <div class="prod-card__price">$2.29</div>
+            </div>
+          </div>
+
+          <!-- Product 3: Road Trip Bundle -->
+          <div class="prod-card reveal" style="--reveal-delay:180ms;">
+            <span class="prod-card__tag">Meal</span>
+            <div class="prod-card__stage" id="prod-icon-3"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Road Trip Bundle</div>
+              <div class="prod-card__desc">Drink + snack + candy &mdash; one low price.</div>
+              <div class="prod-card__price">$7.99</div>
+            </div>
+          </div>
+
+          <!-- Product 4: Dark Roast -->
+          <div class="prod-card reveal" style="--reveal-delay:240ms;">
+            <span class="prod-card__tag">Fresh</span>
+            <div class="prod-card__stage" id="prod-icon-4"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Dark Roast</div>
+              <div class="prod-card__desc">Bold flavor for the serious coffee drinker.</div>
+              <div class="prod-card__price">$2.49</div>
+            </div>
+          </div>
+
+          <!-- Product 5: Soda — Any Size -->
+          <div class="prod-card reveal" style="--reveal-delay:300ms;">
+            <span class="prod-card__tag prod-card__tag--teal">Cold</span>
+            <div class="prod-card__stage" id="prod-icon-5"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Soda &mdash; Any Size</div>
+              <div class="prod-card__desc">Fountain or bottle, any size, one price.</div>
+              <div class="prod-card__price">$1.49</div>
+            </div>
+          </div>
+
+          <!-- Product 6: Protein Jerky -->
+          <div class="prod-card reveal" style="--reveal-delay:360ms;">
+            <span class="prod-card__tag">New</span>
+            <div class="prod-card__stage" id="prod-icon-6"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Protein Jerky</div>
+              <div class="prod-card__desc">Premium jerky, high protein, road-ready.</div>
+              <div class="prod-card__price">$5.99</div>
+            </div>
+          </div>
+
+          <!-- Product 7: Milk + Bread -->
+          <div class="prod-card reveal" style="--reveal-delay:420ms;">
+            <span class="prod-card__tag">Pantry</span>
+            <div class="prod-card__stage" id="prod-icon-7"></div>
+            <div class="prod-card__body">
+              <div class="prod-card__name">Milk &middot; Bread</div>
+              <div class="prod-card__desc">The basics you forgot &mdash; always on the shelf.</div>
+              <div class="prod-card__price">from $2</div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <div class="container"><div class="ed-rule"></div></div>
+
+    <!-- ========= CATEGORIES ========= -->
+    <section class="ed-section" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="ed-head reveal">
+          <div>
+            <span class="ed-eyebrow">Categories</span>
+            <h2 class="ed-display" id="categories-heading">Browse the <em>aisles</em></h2>
+          </div>
+          <div class="ed-head__right">
+            <p class="ed-lead">Six departments, all kept full and organized so you find what you need without a detour.</p>
+          </div>
+        </div>
+
+        <div class="svc-grid">
+
+          <!-- Category 0: Coffee Bar -->
+          <div class="svc-card reveal" style="--reveal-delay:0ms;">
+            <div class="svc-card__icon" id="cat-icon-0"></div>
+            <h3 class="svc-card__title">Coffee Bar</h3>
+            <p class="svc-card__desc">Fresh brewed house and dark roast, cappuccino, hot chocolate, and specialty options &mdash; served all day long.</p>
+            <div class="svc-card__meta">Served All Day</div>
+          </div>
+
+          <!-- Category 1: Cold Beverages -->
+          <div class="svc-card reveal" style="--reveal-delay:60ms;">
+            <div class="svc-card__icon" id="cat-icon-1"></div>
+            <h3 class="svc-card__title">Cold Beverages</h3>
+            <p class="svc-card__desc">Sodas, juices, water, energy drinks, iced teas, and sports drinks &mdash; ice cold from cooler to hand.</p>
+            <div class="svc-card__meta">40+ Options</div>
+          </div>
+
+          <!-- Category 2: Hot Food -->
+          <div class="svc-card reveal" style="--reveal-delay:120ms;">
+            <div class="svc-card__icon" id="cat-icon-2"></div>
+            <h3 class="svc-card__title">Hot Food</h3>
+            <p class="svc-card__desc">Hot dogs, taquitos, breakfast burritos, and roller grill items &mdash; grab and eat on the go.</p>
+            <div class="svc-card__meta">Ready to Eat</div>
+          </div>
+
+          <!-- Category 3: Snacks & Candy -->
+          <div class="svc-card reveal" style="--reveal-delay:180ms;">
+            <div class="svc-card__icon" id="cat-icon-3"></div>
+            <h3 class="svc-card__title">Snacks &amp; Candy</h3>
+            <p class="svc-card__desc">Chips, nuts, jerky, trail mix, candy bars, gummies, and every road-trip snack you can think of.</p>
+            <div class="svc-card__meta">Full Aisle</div>
+          </div>
+
+          <!-- Category 4: Car Essentials -->
+          <div class="svc-card reveal" style="--reveal-delay:240ms;">
+            <div class="svc-card__icon" id="cat-icon-4"></div>
+            <h3 class="svc-card__title">Car Essentials</h3>
+            <p class="svc-card__desc">Motor oil, wiper fluid, air fresheners, phone chargers, and roadside basics to keep you moving.</p>
+            <div class="svc-card__meta">Always Stocked</div>
+          </div>
+
+          <!-- Category 5: Lottery & ATM -->
+          <div class="svc-card reveal" style="--reveal-delay:300ms;">
+            <div class="svc-card__icon" id="cat-icon-5"></div>
+            <h3 class="svc-card__title">Lottery &amp; ATM</h3>
+            <p class="svc-card__desc">Scratchers, Powerball, Mega Millions, and a 24/7 on-site ATM. Try your luck or grab some cash.</p>
+            <div class="svc-card__meta">Available Daily</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><div class="ed-rule"></div></div>
+
+    <!-- ========= THREE PROMISES ========= -->
+    <section class="ed-section" aria-labelledby="promises-heading">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:var(--space-3xl);">
+          <span class="ed-eyebrow">Our Promise</span>
+          <h2 class="ed-display" id="promises-heading">What you can <em>count on</em></h2>
+        </div>
+
+        <div class="svc-grid" style="margin-top:0;">
+
+          <!-- Promise 1: Stocked -->
+          <div class="dim-card reveal" style="--reveal-delay:0ms;">
+            <span style="display:block;font-family:'SF Mono',ui-monospace,monospace;font-size:var(--text-xs);color:var(--text-muted);letter-spacing:0.12em;margin-bottom:var(--space-lg);">01</span>
+            <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--space-sm);">Stocked</h3>
+            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.55;">Shelves full, coolers loaded, coffee brewing. We restock throughout the day so you never find an empty slot.</p>
+          </div>
+
+          <!-- Promise 2: Clean -->
+          <div class="dim-card reveal" style="--reveal-delay:100ms;">
+            <span style="display:block;font-family:'SF Mono',ui-monospace,monospace;font-size:var(--text-xs);color:var(--text-muted);letter-spacing:0.12em;margin-bottom:var(--space-lg);">02</span>
+            <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--space-sm);">Clean</h3>
+            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.55;">A well-maintained facility from floor to fountain. Clean restrooms, organized aisles, and a welcoming atmosphere every visit.</p>
+          </div>
+
+          <!-- Promise 3: Quick -->
+          <div class="dim-card reveal" style="--reveal-delay:200ms;">
+            <span style="display:block;font-family:'SF Mono',ui-monospace,monospace;font-size:var(--text-xs);color:var(--text-muted);letter-spacing:0.12em;margin-bottom:var(--space-lg);">03</span>
+            <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--space-sm);">Quick</h3>
+            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.55;">No long lines, no maze of aisles. Get in, grab what you need, and get back on the road in minutes.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= FINAL CTA ========= -->
+    <section class="ed-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="ed-final reveal">
+          <h2 id="cta-heading">Run Out Of <em>Something?</em></h2>
+          <p>We've got it.</p>
+          <div class="ed-final__ctas">
+            <a href="contact.html" class="btn btn-primary btn-lg">Get Directions</a>
+            <a href="deals.html" class="btn btn-secondary btn-lg">View Deals</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -346,6 +341,7 @@
   <!-- ========= STICKY MOBILE CTA BAR (injected by JS) ========= -->
   <div id="mobile-cta" class="mobile-cta-bar" aria-label="Quick actions"></div>
 
+  <script src="js/icons3d.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

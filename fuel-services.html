@@ -30,8 +30,10 @@
   <!-- Favicon placeholder -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Stylesheet -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/elevated.css">
+  <link rel="stylesheet" href="css/home-editorial.css">
 
   <!-- JSON-LD GasStation Schema -->
   <script type="application/ld+json">
@@ -87,312 +89,149 @@
   <main>
 
     <!-- ========= PAGE HERO ========= -->
-    <section class="hero hero-page">
+    <section class="page-hero">
+      <div class="page-hero__bg"></div>
       <div class="container">
-        <div class="hero-content animate-on-scroll">
-          <span class="section-label">Fuel &amp; Services</span>
-          <h1>Fuel Up <span class="highlight">Fast</span> in Oakley</h1>
-          <p class="hero-subtitle">Multiple fuel grades, diesel, and a full suite of forecourt services to get you back on the road. Conveniently located near Highway 4 for quick stops and easy access.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========= FUEL PRICE TICKER ========= -->
-    <section class="section" aria-label="Current fuel prices">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">Today's Fuel Prices</span>
-          <h2 class="section-title">Current Prices at the Pump</h2>
-          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Competitive pricing on all fuel grades. Prices updated daily.</p>
-        </div>
-
-        <div class="fuel-ticker stagger-children" role="list">
-          <div class="fuel-price-card glass-card animate-on-scroll" role="listitem">
-            <div class="fuel-type">Regular 87</div>
-            <div class="fuel-price">$4.29</div>
-            <div class="fuel-unit">per gallon</div>
-          </div>
-          <div class="fuel-price-card glass-card animate-on-scroll" role="listitem">
-            <div class="fuel-type">Plus 89</div>
-            <div class="fuel-price">$4.59</div>
-            <div class="fuel-unit">per gallon</div>
-          </div>
-          <div class="fuel-price-card glass-card animate-on-scroll" role="listitem">
-            <div class="fuel-type">Premium 91</div>
-            <div class="fuel-price">$4.89</div>
-            <div class="fuel-unit">per gallon</div>
-          </div>
-          <div class="fuel-price-card glass-card animate-on-scroll" role="listitem">
-            <div class="fuel-type">Diesel</div>
-            <div class="fuel-price">$4.99</div>
-            <div class="fuel-unit">per gallon</div>
-          </div>
-        </div>
-
-        <p class="text-center mt-xl" style="font-size:var(--text-xs);color:var(--text-muted);">Prices updated daily. Actual price may vary. Cash &amp; credit prices may differ.</p>
-      </div>
-    </section>
-
-    <!-- ========= FUEL TYPES DETAIL ========= -->
-    <section class="section" style="background:var(--bg-secondary);" aria-label="Fuel grade details">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">Fuel Grades</span>
-          <h2 class="section-title">Choose the Right Fuel for Your Vehicle</h2>
-          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">We carry all major octane grades plus diesel to keep every vehicle running at its best.</p>
-        </div>
-
-        <div class="grid grid-2 stagger-children">
-
-          <div class="glass-card animate-on-scroll">
-            <h3 style="color:var(--accent);font-size:var(--text-xl);margin-bottom:var(--space-sm);">Regular Unleaded (87)</h3>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">The standard fuel for most passenger cars, SUVs, and trucks. Regular 87 octane is the most economical option and works perfectly for engines that don't require higher-octane fuel. Ideal for daily commuters and everyday driving around Oakley and East Contra Costa County.</p>
-          </div>
-
-          <div class="glass-card animate-on-scroll">
-            <h3 style="color:var(--accent);font-size:var(--text-xl);margin-bottom:var(--space-sm);">Plus Midgrade (89)</h3>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">A step up from regular for vehicles that benefit from a slightly higher octane rating. Plus 89 is recommended for some newer sedans and light trucks. Check your owner's manual to see if midgrade is the right choice for your engine.</p>
-          </div>
-
-          <div class="glass-card animate-on-scroll">
-            <h3 style="color:var(--accent);font-size:var(--text-xl);margin-bottom:var(--space-sm);">Premium Unleaded (91)</h3>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">High-octane fuel designed for performance and luxury vehicles with high-compression or turbocharged engines. Premium 91 helps prevent engine knocking and ensures optimal performance. Required by many European imports and sports cars.</p>
-          </div>
-
-          <div class="glass-card animate-on-scroll">
-            <h3 style="color:var(--accent);font-size:var(--text-xl);margin-bottom:var(--space-sm);">Diesel</h3>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">Ultra-low sulfur diesel (ULSD) for diesel-powered trucks, SUVs, and commercial vehicles. Our diesel pumps are designed with wide lanes for easy access by larger vehicles. Perfect for fleet operators and truckers traveling along Highway 4.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========= FORECOURT SERVICES ========= -->
-    <section class="section" aria-label="Forecourt services">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">Forecourt Services</span>
-          <h2 class="section-title">More Than Just Fuel</h2>
-          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Everything you need to take care of your vehicle, all in one stop.</p>
-        </div>
-
-        <div class="spec-list animate-on-scroll">
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Pay at Pump</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Free Air</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Free Water</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Windshield Squeegees</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Tire Inflation</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Propane Exchange</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Car Wash</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Vacuum Station</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Well-Lit 24hr Canopy</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon" aria-hidden="true" style="color:var(--accent-green);font-weight:700;">&#10003;</span>
-            <span>Mobile Pay Accepted</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========= PAYMENT METHODS ========= -->
-    <section class="section" style="background:var(--bg-secondary);" aria-label="Accepted payment methods">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">Payment Methods</span>
-          <h2 class="section-title">We Accept All Major Payment Types</h2>
-          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Pay however you prefer -- card, cash, or mobile wallet.</p>
-        </div>
-
-        <div class="grid grid-4 stagger-children">
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128179;</div>
-            <h4 style="font-size:var(--text-base);">Visa</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128179;</div>
-            <h4 style="font-size:var(--text-base);">Mastercard</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128179;</div>
-            <h4 style="font-size:var(--text-base);">Amex</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128179;</div>
-            <h4 style="font-size:var(--text-base);">Discover</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128241;</div>
-            <h4 style="font-size:var(--text-base);">Apple Pay</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128241;</div>
-            <h4 style="font-size:var(--text-base);">Google Pay</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#128181;</div>
-            <h4 style="font-size:var(--text-base);">Cash</h4>
-          </div>
-          <div class="glass-card text-center animate-on-scroll">
-            <div style="font-size:var(--text-2xl);margin-bottom:var(--space-sm);">&#127380;</div>
-            <h4 style="font-size:var(--text-base);">EBT</h4>
-            <p style="font-size:var(--text-xs);color:var(--text-muted);margin-top:var(--space-xs);">In-store only</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========= SAFETY ========= -->
-    <section class="section" aria-label="Safety and cleanliness">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">Safety &amp; Cleanliness</span>
-          <h2 class="section-title">A Clean, Safe, Well-Lit Station</h2>
-          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Your safety is our priority, day and night.</p>
-        </div>
-
-        <div class="grid grid-3 stagger-children">
-          <div class="glass-card animate-on-scroll">
-            <div style="font-size:var(--text-2xl);color:var(--accent);margin-bottom:var(--space-md);">&#128161;</div>
-            <h4 style="margin-bottom:var(--space-sm);">Well-Lit Canopy</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">Our entire forecourt is illuminated by bright LED lighting under a full canopy, providing clear visibility at all hours. Fuel comfortably whether it's dawn, dusk, or the middle of the night.</p>
-          </div>
-          <div class="glass-card animate-on-scroll">
-            <div style="font-size:var(--text-2xl);color:var(--accent);margin-bottom:var(--space-md);">&#128247;</div>
-            <h4 style="margin-bottom:var(--space-sm);">Security Cameras</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">24/7 HD security camera coverage across the entire property -- pumps, parking lot, store entrance, and perimeter. Monitored for your peace of mind and to deter crime.</p>
-          </div>
-          <div class="glass-card animate-on-scroll">
-            <div style="font-size:var(--text-2xl);color:var(--accent);margin-bottom:var(--space-md);">&#10024;</div>
-            <h4 style="margin-bottom:var(--space-sm);">Clean Maintained Facility</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">We maintain a spotless station with regular cleaning throughout the day. Clean restrooms, tidy pump islands, and a well-kept lot so every visit is a pleasant experience.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========= FLEET / COMMERCIAL ========= -->
-    <section class="section" style="background:var(--bg-secondary);" aria-label="Fleet and commercial services">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">Fleet &amp; Commercial</span>
-          <h2 class="section-title">Built for Trucks &amp; Fleets</h2>
-          <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Commercial drivers and fleet operators are welcome. Our station is designed to handle larger vehicles with ease.</p>
-        </div>
-
-        <div class="grid grid-2 stagger-children">
-          <div class="glass-card animate-on-scroll">
-            <h4 style="color:var(--accent);margin-bottom:var(--space-sm);">Diesel Fueling</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">Dedicated diesel pumps with high-flow nozzles to get your truck or fleet vehicle fueled and back on the road quickly. Ultra-low sulfur diesel (ULSD) meets all California emissions standards.</p>
-          </div>
-          <div class="glass-card animate-on-scroll">
-            <h4 style="color:var(--accent);margin-bottom:var(--space-sm);">Wide Access for Trucks</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">Our lot layout provides generous lane widths and turning radius for box trucks, work trucks, and vehicles with trailers. Easy in, easy out -- no tight squeezes.</p>
-          </div>
-          <div class="glass-card animate-on-scroll">
-            <h4 style="color:var(--accent);margin-bottom:var(--space-sm);">Receipt at Pump</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">Print your receipt right at the pump for fast expense tracking and fleet record keeping. No need to go inside unless you want to grab a coffee or snack from the store.</p>
-          </div>
-          <div class="glass-card animate-on-scroll">
-            <h4 style="color:var(--accent);margin-bottom:var(--space-sm);">Fleet Card Friendly</h4>
-            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">We accept major fleet fuel cards including WEX, Voyager, Fuelman, and more. Streamline your company's fuel management and expense reporting effortlessly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========= FAQ ACCORDION ========= -->
-    <section class="section" aria-label="Frequently asked questions">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-label">FAQ</span>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="accordion animate-on-scroll" style="max-width:800px;margin:0 auto;">
-
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false">Do you have diesel?</button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner">Yes! We offer ultra-low sulfur diesel (ULSD) at dedicated diesel pumps. Our diesel lanes are designed with extra width to accommodate trucks, work vehicles, and vehicles with trailers. Diesel is available during all operating hours.</div>
+        <div class="page-hero__inner">
+          <div class="reveal reveal--left">
+            <span class="page-hero__kicker">Fuel &amp; Services</span>
+            <h1>Clean fuel.<br><em>Honest prices.</em></h1>
+            <p class="lead">Regular, Plus, Premium, and Diesel — top-tier detergents in every grade, priced to match the corner. Rewards members save another 3&cent; on every gallon.</p>
+            <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;margin-top:var(--space-xl);">
+              <a href="contact.html" class="btn btn-primary">Open in Maps</a>
+              <a href="deals.html" class="btn btn-secondary">Join Rewards</a>
             </div>
           </div>
-
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false">Do you have propane?</button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner">We offer propane tank exchange. Simply bring your empty propane tank and swap it for a full one. Great for grilling, patio heaters, and outdoor cooking. Propane exchange is available during store hours.</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false">Can I pay with mobile wallet?</button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner">Absolutely. Our pumps and in-store terminals accept Apple Pay, Google Pay, and other NFC-enabled mobile wallets. Just tap your phone or smartwatch to pay -- no physical card needed.</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false">Do you offer receipts at pump?</button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner">Yes. Every pump is equipped with a receipt printer so you can get your transaction record immediately after fueling. If the printer is out of paper, you can always request a receipt inside the store.</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false">What octane grades are available?</button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner">We carry three octane grades of unleaded gasoline: Regular (87 octane), Plus/Midgrade (89 octane), and Premium (91 octane). We also offer diesel fuel. Check your vehicle's owner manual or fuel door label for the recommended octane rating.</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <button class="accordion-trigger" aria-expanded="false">Is there EV charging?</button>
-            <div class="accordion-content">
-              <div class="accordion-content-inner">We do not currently have EV charging stations on site. However, there are public EV charging options nearby in the Oakley area. We are evaluating the addition of EV chargers in the future to serve the growing electric vehicle community.</div>
-            </div>
-          </div>
-
+          <div class="page-hero__icon reveal reveal--right" id="fuel-hero-icon"></div>
         </div>
       </div>
     </section>
 
-    <!-- ========= CTA BANNER ========= -->
-    <section class="section">
+    <!-- ========= PRICE BOARD ========= -->
+    <section class="ed-section">
       <div class="container">
-        <div class="cta-banner animate-on-scroll">
-          <h2>Ready to Fuel Up?</h2>
-          <p>Stop by OakleyGasAndSave in Oakley for competitive fuel prices and friendly service. We're right off Highway 4.</p>
-          <div class="flex flex-wrap" style="justify-content:center;">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=37.9974,-121.7127" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Get Directions</a>
-            <a href="tel:+19250000000" class="btn btn-secondary btn-lg">Call Now</a>
+        <div class="ed-head reveal">
+          <div>
+            <span class="ed-eyebrow">At The Pump Right Now</span>
+            <h2 class="ed-display">Today's <em>prices</em>.</h2>
+          </div>
+          <div class="ed-head__right">
+            <p class="ed-lead">Updated every morning. What's posted at the street is exactly what you pay at the pump — no surprises.</p>
+          </div>
+        </div>
+        <div class="price-board" data-stagger>
+          <div class="price-board__tile reveal">
+            <div class="price-board__grade">Regular &middot; 87</div>
+            <div class="price-board__price">$4.39</div>
+            <div class="price-board__sub">per gallon <span class="price-board__delta">&blacktriangledown; &minus;0.08</span></div>
+            <div style="margin-top:var(--space-sm);font-size:var(--text-xs);color:var(--text-secondary);">Everyday driving</div>
+          </div>
+          <div class="price-board__tile reveal">
+            <div class="price-board__grade">Plus &middot; 89</div>
+            <div class="price-board__price">$4.59</div>
+            <div class="price-board__sub">per gallon <span class="price-board__delta">&blacktriangledown; &minus;0.05</span></div>
+            <div style="margin-top:var(--space-sm);font-size:var(--text-xs);color:var(--text-secondary);">Mid-range engines</div>
+          </div>
+          <div class="price-board__tile price-board__tile--premium reveal">
+            <div class="price-board__grade">Premium &middot; 91</div>
+            <div class="price-board__price">$4.79</div>
+            <div class="price-board__sub">per gallon <span class="price-board__delta">&blacktriangledown; &minus;0.10</span></div>
+            <div style="margin-top:var(--space-sm);font-size:var(--text-xs);color:var(--text-secondary);">Performance &amp; luxury</div>
+          </div>
+          <div class="price-board__tile reveal">
+            <div class="price-board__grade">Diesel &middot; &mdash;</div>
+            <div class="price-board__price">$4.99</div>
+            <div class="price-board__sub">per gallon <span class="price-board__delta">&blacktriangledown; &minus;0.03</span></div>
+            <div style="margin-top:var(--space-sm);font-size:var(--text-xs);color:var(--text-secondary);">Trucks &amp; commercial</div>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:var(--text-xs);color:var(--text-muted);margin-top:var(--space-xl);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">
+          Rewards members save an additional 3&cent; / gal on every grade — stacking with the posted price
+        </p>
+      </div>
+    </section>
+
+    <!-- ========= BEYOND THE PUMP ========= -->
+    <section class="ed-section">
+      <div class="container">
+        <div class="ed-head reveal">
+          <div>
+            <span class="ed-eyebrow">Beyond The Pump</span>
+            <h2 class="ed-display">More than <em>fuel</em>.</h2>
+          </div>
+          <div class="ed-head__right">
+            <p class="ed-lead">Every visit is a full-service stop. Air, water, propane, a quick wash, and cash on hand — all without leaving the lot.</p>
+          </div>
+        </div>
+        <div class="svc-grid" data-stagger>
+          <div class="svc-card reveal">
+            <div class="svc-card__icon" id="svc-icon-air"></div>
+            <h3 class="svc-card__title">Air &amp; Water</h3>
+            <p class="svc-card__desc">Free tire inflation and windshield water available 24/7 at every pump island. Keep your tires at the right PSI and your glass clean.</p>
+            <p class="svc-card__meta">Always free &middot; No token needed</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-card__icon" id="svc-icon-propane"></div>
+            <h3 class="svc-card__title">Propane Exchange</h3>
+            <p class="svc-card__desc">Swap your empty tank for a fresh one in under a minute. Standard 20 lb cylinders for grills, patio heaters, and outdoor cooking.</p>
+            <p class="svc-card__meta">20 lb tanks &middot; During store hours</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-card__icon" id="svc-icon-wash"></div>
+            <h3 class="svc-card__title">Quick Car Wash</h3>
+            <p class="svc-card__desc">Drive-through wash gets road dust and grime off in minutes. Pair it with a fill-up for the fastest full-service stop in Oakley.</p>
+            <p class="svc-card__meta">Drive-through &middot; Open daily</p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-card__icon" id="svc-icon-atm"></div>
+            <h3 class="svc-card__title">On-Site ATM</h3>
+            <p class="svc-card__desc">Grab cash on the go without hunting for a bank. Located inside the store near the entrance for quick, convenient access.</p>
+            <p class="svc-card__meta">Inside store &middot; All major cards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= QUALITY PROMISE ========= -->
+    <section class="ed-section">
+      <div class="container">
+        <div class="ed-split reveal">
+          <div class="ed-split__art">
+            <div class="ed-split__icon" id="quality-shield-icon"></div>
+          </div>
+          <div class="ed-split__body">
+            <span class="ed-eyebrow">Quality Promise</span>
+            <h2 class="ed-display">Fuel you can <em>trust</em>.</h2>
+            <p class="ed-lead">Every gallon that leaves our pumps meets strict standards — from the refinery to your tank.</p>
+            <ol class="ed-numbered">
+              <li>
+                <strong>Top-Tier Detergents</strong>
+                <p>Every grade contains deposit-control additives that exceed EPA minimums, keeping injectors and intake valves clean over time.</p>
+              </li>
+              <li>
+                <strong>Regularly Inspected Equipment</strong>
+                <p>Pumps, hoses, and nozzles are inspected on a routine schedule. Filters are changed frequently to ensure clean fuel delivery.</p>
+              </li>
+              <li>
+                <strong>Transparent Pricing</strong>
+                <p>The price on the street sign is the price you pay at the pump. No hidden fees, no bait-and-switch between cash and card.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= FINAL CTA ========= -->
+    <section class="ed-section">
+      <div class="container">
+        <div class="ed-final reveal">
+          <span class="ed-eyebrow" style="justify-content:center;">Fuel Smarter</span>
+          <h2>Save every <em>gallon</em>.</h2>
+          <p>Join Rewards and pay less at the pump from your very next fill-up. Sign up in 30 seconds at the counter.</p>
+          <div class="ed-final__ctas">
+            <a href="deals.html" class="btn btn-primary">Join Rewards</a>
+            <a href="contact.html" class="btn btn-secondary">Get Directions</a>
           </div>
         </div>
       </div>
@@ -406,7 +245,8 @@
   <!-- ========= STICKY MOBILE CTA BAR (injected by main.js) ========= -->
   <div id="mobile-cta" class="mobile-cta-bar" aria-label="Quick actions"></div>
 
-  <!-- Main JS -->
+  <!-- Scripts -->
+  <script src="js/icons3d.js"></script>
   <script src="js/main.js"></script>
 
 </body>
