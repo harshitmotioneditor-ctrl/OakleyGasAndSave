@@ -121,8 +121,8 @@
                 </svg>
             </div>
 
-            <!-- 3D floating icons (injected by JS) -->
-            <div class="hero-stage" aria-hidden="true">
+            <!-- 3D floating icons — desktop: absolute positioned; mobile: inline row -->
+            <div class="hero-stage hero-stage--desktop" aria-hidden="true">
                 <div class="hero-stage__pump" id="hero-pump"></div>
                 <div class="hero-stage__coffee" id="hero-coffee"></div>
                 <div class="hero-stage__can" id="hero-can"></div>
@@ -142,6 +142,14 @@
                     <a href="contact.html" class="btn btn-primary">Plan Your Stop &rarr;</a>
                     <a href="fuel-services.html" class="btn btn-secondary">Today's Prices</a>
                 </div>
+
+                <!-- Mobile 3D icons — shown inline in flow on small screens -->
+                <div class="hero-stage hero-stage--mobile reveal" aria-hidden="true">
+                    <div class="hero-stage__coffee" id="hero-coffee-m"></div>
+                    <div class="hero-stage__pump" id="hero-pump-m"></div>
+                    <div class="hero-stage__can" id="hero-can-m"></div>
+                </div>
+
                 <div class="ed-hero__meta reveal">
                     <span><strong>5 AM – 11 PM</strong> &middot; Every Day</span>
                     <span><strong>4.8&#9733;</strong> &middot; 600+ Reviews</span>

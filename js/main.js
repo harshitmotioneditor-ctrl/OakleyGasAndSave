@@ -152,9 +152,14 @@
     var page = getActivePage();
 
     if (page === 'home') {
+      // Desktop hero icons (absolute positioned)
       injectIcon('hero-pump', icons.i3Pump, 260);
       injectIcon('hero-coffee', icons.i3Coffee, 130);
       injectIcon('hero-can', icons.i3Can, 110);
+      // Mobile hero icons (inline flow)
+      injectIcon('hero-pump-m', icons.i3Pump, 260);
+      injectIcon('hero-coffee-m', icons.i3Coffee, 130);
+      injectIcon('hero-can-m', icons.i3Can, 110);
       injectIcon('split-road-icon', icons.i3Road, 90);
       injectIcon('split-bag-icon', icons.i3Bag, 100);
       injectIcon('trip-coffee-icon', icons.i3Coffee, 100);

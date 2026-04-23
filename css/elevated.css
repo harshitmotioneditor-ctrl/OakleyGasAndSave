@@ -299,6 +299,25 @@ h1.ed-display,
 .page-hero__icon svg {
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6)) drop-shadow(0 0 30px rgba(245,158,11,0.2));
   animation: hero-icon-float 6s ease-in-out infinite;
+  max-width: 100%;
+  height: auto;
+}
+/* Scale subpage hero icons on mobile */
+@media (max-width: 767px) {
+  .page-hero__icon {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 479px) {
+  .page-hero__icon {
+    max-width: 140px;
+  }
+}
+@media (max-width: 359px) {
+  .page-hero__icon {
+    max-width: 110px;
+  }
 }
 @keyframes hero-icon-float {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
@@ -473,7 +492,23 @@ h1.ed-display,
   border-radius: 50%;
   z-index: 0;
 }
-.prod-card__stage svg { position: relative; z-index: 1; }
+.prod-card__stage svg {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 479px) {
+  .prod-card__stage {
+    padding: var(--space-md);
+  }
+  .prod-card__stage svg {
+    max-width: 80px;
+  }
+  .prod-card__body {
+    padding: var(--space-md);
+  }
+}
 .prod-card__body {
   padding: var(--space-lg);
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -832,14 +867,122 @@ h1.ed-display,
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-8px) rotate(4deg); }
 }
+
+/* --- Desktop: show absolute stage, hide mobile inline stage --- */
+.hero-stage--mobile {
+  display: none;
+}
+
+/* --- Mobile: hide absolute stage, show inline stage --- */
 @media (max-width: 900px) {
-  .hero-stage { position: relative; width: 100%; max-width: 420px; height: 340px; margin: var(--space-xl) auto 0; right: 0; bottom: 0; }
+  .hero-stage--desktop {
+    display: none;
+  }
+  .hero-stage--mobile {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0;
+    margin: var(--space-lg) auto;
+    position: relative;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+  .hero-stage--mobile .hero-stage__pump,
+  .hero-stage--mobile .hero-stage__coffee,
+  .hero-stage--mobile .hero-stage__can {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+  .hero-stage--mobile .hero-stage__pump {
+    z-index: 3;
+    margin: 0 -8px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(245,158,11,0.2));
+  }
+  .hero-stage--mobile .hero-stage__coffee {
+    z-index: 2;
+    transform: translateY(-12px);
+    filter: drop-shadow(0 16px 24px rgba(0,0,0,0.6));
+  }
+  .hero-stage--mobile .hero-stage__can {
+    z-index: 1;
+    transform: translateY(-24px);
+    filter: drop-shadow(0 16px 24px rgba(0,0,0,0.6));
+  }
+  /* Scale icons for tablet/large phone */
+  .hero-stage--mobile .hero-stage__pump svg {
+    width: 150px !important;
+    height: auto !important;
+  }
+  .hero-stage--mobile .hero-stage__coffee svg {
+    width: 85px !important;
+    height: auto !important;
+  }
+  .hero-stage--mobile .hero-stage__can svg {
+    width: 75px !important;
+    height: auto !important;
+  }
 }
-@media (max-width: 600px) {
-  .hero-stage { max-width: 300px; height: 260px; }
+
+/* --- Phones (<768px): smaller icons --- */
+@media (max-width: 767px) {
+  .hero-stage--mobile .hero-stage__pump svg {
+    width: 130px !important;
+  }
+  .hero-stage--mobile .hero-stage__coffee svg {
+    width: 75px !important;
+  }
+  .hero-stage--mobile .hero-stage__can svg {
+    width: 65px !important;
+  }
 }
+
+/* --- Small phones (<480px): compact icons --- */
+@media (max-width: 479px) {
+  .hero-stage--mobile {
+    margin: var(--space-md) auto;
+  }
+  .hero-stage--mobile .hero-stage__pump svg {
+    width: 110px !important;
+  }
+  .hero-stage--mobile .hero-stage__coffee svg {
+    width: 62px !important;
+  }
+  .hero-stage--mobile .hero-stage__can svg {
+    width: 52px !important;
+  }
+  .hero-stage--mobile .hero-stage__coffee {
+    transform: translateY(-8px);
+  }
+  .hero-stage--mobile .hero-stage__can {
+    transform: translateY(-18px);
+  }
+}
+
+/* --- Ultra-small phones (<360px) --- */
 @media (max-width: 359px) {
-  .hero-stage { max-width: 240px; height: 200px; }
+  .hero-stage--mobile {
+    margin: var(--space-sm) auto;
+  }
+  .hero-stage--mobile .hero-stage__pump svg {
+    width: 88px !important;
+  }
+  .hero-stage--mobile .hero-stage__coffee svg {
+    width: 50px !important;
+  }
+  .hero-stage--mobile .hero-stage__can svg {
+    width: 42px !important;
+  }
+  .hero-stage--mobile .hero-stage__coffee {
+    transform: translateY(-6px);
+  }
+  .hero-stage--mobile .hero-stage__can {
+    transform: translateY(-14px);
+  }
 }
 
 /* ========= ELEVATED — COMPREHENSIVE RESPONSIVE ========= */

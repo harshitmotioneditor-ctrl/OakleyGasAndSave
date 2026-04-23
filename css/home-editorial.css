@@ -117,6 +117,18 @@
     gap: var(--space-md);
   }
 }
+@media (max-width: 479px) {
+  .ed-hero__meta {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 10px;
+    width: 100%;
+  }
+  .ed-hero__meta span {
+    display: block;
+  }
+}
 
 /* ---------- TICKER ---------- */
 .ed-ticker {
