@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="340" height="64">
+  <g fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(6 18)">
+    <path d="M14 0L4 5l10 5 10-5-10-5z"></path>
+    <path d="M4 15l10 5 10-5"></path>
+    <path d="M4 10l10 5 10-5"></path>
+  </g>
+  <text x="44" y="42" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.2">
+    <tspan fill="#f59e0b">O</tspan><tspan fill="#f1f5f9">akleyGas</tspan><tspan fill="#f59e0b" font-weight="900">&amp;</tspan><tspan fill="#f1f5f9">Save</tspan>
+  </text>
+</svg>

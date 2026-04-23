@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"></head><body><div class="card">
+  <div class="label">Motion — 3 durations, plain ease</div>
+  <style>
+    .mot-demo { padding:12px 16px; border:1px solid rgba(255,255,255,.08); border-radius:12px; background:rgba(255,255,255,.04); display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .mot-bar { width:120px; height:6px; border-radius:3px; background:rgba(255,255,255,.08); overflow:hidden; position:relative; }
+    .mot-bar::after { content:''; position:absolute; inset:0; background:#f59e0b; transform-origin:left; animation-iteration-count:infinite; animation-timing-function:ease; }
+    .mot-bar.fast::after { animation:slide 1.5s infinite; animation-duration:1.5s; }
+    @keyframes slide { 0% { transform:scaleX(0) } 50% { transform:scaleX(1) } 100% { transform:scaleX(0) } }
+  </style>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="mot-demo"><div><div style="font-weight:600;font-size:13px;">Fast · hover tint</div><div class="tok__mono" style="font-size:11px;">150ms ease</div></div><div class="mot-bar fast" style="animation-duration:.6s;"></div></div>
+    <div class="mot-demo"><div><div style="font-weight:600;font-size:13px;">Base · most transitions</div><div class="tok__mono" style="font-size:11px;">250ms ease</div></div><div class="mot-bar fast" style="animation-duration:1s;"></div></div>
+    <div class="mot-demo"><div><div style="font-weight:600;font-size:13px;">Slow · accordion, scroll-in</div><div class="tok__mono" style="font-size:11px;">400ms ease</div></div><div class="mot-bar fast" style="animation-duration:1.6s;"></div></div>
+  </div>
+  <div style="font-size:12px;color:#64748b;">Scroll-in: opacity 0 + translateY(24px) → visible, staggered at 80ms between siblings. Pulse on status dots (2s). prefers-reduced-motion fully respected.</div>
+</div></body></html>

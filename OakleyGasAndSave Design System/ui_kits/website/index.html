@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OakleyGasAndSave — UI Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Remap source variables to the names used in the source repo so style.css works unchanged -->
+  <link rel="stylesheet" href="../../source/css/style.css">
+  <link rel="stylesheet" href="home-editorial.css?v=3">
+  <link rel="stylesheet" href="elevated.css?v=1">
+  <style>
+    /* Small overrides just for the React kit */
+    .section-header { text-align: left; }
+    .promo-card.glass-card { padding: var(--space-xl); }
+    .reason-card.glass-card { padding: var(--space-xl) var(--space-xl) var(--space-xl) 4rem; }
+    .reason-card.glass-card::before {
+      counter-increment: reason;
+      content: counter(reason, decimal-leading-zero);
+      position: absolute; left: var(--space-xl); top: var(--space-xl);
+      font-size: var(--text-3xl); font-weight: 800;
+      color: rgba(245, 158, 11, 0.2); line-height: 1;
+    }
+    .reasons-grid { counter-reset: reason; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="Nav.jsx"></script>
+  <script type="text/babel" src="Shared.jsx"></script>
+  <script type="text/babel" src="Icons3D.jsx"></script>
+  <script type="text/babel" src="Home.jsx"></script>
+  <script type="text/babel" src="Pages.jsx"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // ---------------------------------------------------------------
+    // Amenity Rail — sticky right-edge chip cluster
+    // ---------------------------------------------------------------
+    function AmenityRail({ onNavigate }) {
+      const chips = [
+        { id: 'fuel',    title: 'Fuel Prices',  svg: <path d="M4 22V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v19M4 14h10M14 7h2a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2v-7l-2-2"/> },
+        { id: 'coffee',  title: 'Coffee Bar',   svg: <><path d="M3 8h14v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><path d="M17 10h2a3 3 0 0 1 0 6h-2"/><path d="M7 2v3M11 2v3M15 2v3"/></> },
+        { id: 'snack',   title: 'Snacks & Drinks', svg: <><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></> },
+        { id: 'air',     title: 'Air · Water',   svg: <><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5 8q4 2 7 0 3-2 7 0M5 16q4-2 7 0 3 2 7 0"/></> },
+        { id: 'atm',     title: 'On-Site ATM',   svg: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h2M11 15h2"/></> },
+      ];
+      return (
+        <aside className="amenity-rail" aria-label="On-site amenities">
+          {chips.map(c => (
+            <button key={c.id} className="amenity-rail__chip" title={c.title} aria-label={c.title}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{c.svg}</svg>
+            </button>
+          ))}
+          <div className="amenity-rail__status" title="Open now — 5 AM to 11 PM" aria-label="Open now"></div>
+        </aside>
+      );
+    }
+
+    // ---------------------------------------------------------------
+    // Scroll-reveal bootstrap — intersection observer applied to .reveal
+    // ---------------------------------------------------------------
+    function useScrollReveal(trigger) {
+      useEffect(() => {
+        const els = document.querySelectorAll('.reveal:not(.is-in)');
+        if (!('IntersectionObserver' in window)) {
+          els.forEach(el => el.classList.add('is-in'));
+          return;
+        }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              const el = e.target;
+              // stagger delay if data-stagger is present on parent
+              const parent = el.closest('[data-stagger]');
+              if (parent) {
+                const sibs = Array.from(parent.querySelectorAll(':scope > .reveal'));
+                const idx = sibs.indexOf(el);
+                if (idx >= 0) el.style.setProperty('--reveal-delay', `${idx * 90}ms`);
+              }
+              el.classList.add('is-in');
+              io.unobserve(el);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(el => io.observe(el));
+        return () => io.disconnect();
+      }, [trigger]);
+    }
+
+    function App() {
+      const stored = typeof localStorage !== 'undefined' ? localStorage.getItem('ogs-page') : null;
+      const [page, setPage] = useState(stored || 'home');
+      const navigate = (id) => {
+        setPage(id);
+        if (typeof localStorage !== 'undefined') localStorage.setItem('ogs-page', id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+      useScrollReveal(page);
+      return (
+        <>
+          <Nav active={page} onNavigate={navigate} />
+          <AmenityRail onNavigate={navigate} />
+          {page === 'home' && <HomePage onNavigate={navigate} />}
+          {page === 'fuel' && <FuelPage />}
+          {page === 'store' && <StorePage />}
+          {page === 'deals' && <DealsPage />}
+          {page === 'contact' && <ContactPage />}
+          <Footer />
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

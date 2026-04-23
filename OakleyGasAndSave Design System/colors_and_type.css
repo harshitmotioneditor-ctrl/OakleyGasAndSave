@@ -1,0 +1,171 @@
+/* ============================================
+   OakleyGasAndSave — Design Tokens
+   Colors, Typography, Spacing, Motion
+   ============================================ */
+
+:root {
+  /* ---- BASE COLOR PALETTE ---- */
+
+  /* Backgrounds — a deep, near-black slate */
+  --ogs-bg-primary:       #0d0f14;  /* page background */
+  --ogs-bg-secondary:     #141821;  /* footer, quick-facts strip */
+  --ogs-bg-card:          rgba(255, 255, 255, 0.04);
+  --ogs-bg-glass:         rgba(255, 255, 255, 0.06);
+  --ogs-bg-glass-hover:   rgba(255, 255, 255, 0.10);
+
+  /* Accent — signature amber */
+  --ogs-accent:           #f59e0b;  /* primary amber (headlight glow) */
+  --ogs-accent-light:     #fbbf24;  /* hover/brighter */
+  --ogs-accent-dark:      #d97706;  /* pressed/darker */
+  --ogs-accent-glow:      rgba(245, 158, 11, 0.25);
+
+  /* Status accents */
+  --ogs-green:            #22c55e;  /* "Open Now" */
+  --ogs-red:              #ef4444;  /* "Closed" */
+  --ogs-blue:             #3b82f6;  /* tertiary accent / hero glow */
+
+  /* Text on dark */
+  --ogs-text-primary:     #f1f5f9;  /* body + headings */
+  --ogs-text-secondary:   #94a3b8;  /* muted body */
+  --ogs-text-muted:       #64748b;  /* labels, fine print */
+  --ogs-text-on-accent:   #0d0f14;  /* text on amber */
+
+  /* Borders (glass strokes) */
+  --ogs-border-glass:        rgba(255, 255, 255, 0.08);
+  --ogs-border-glass-hover:  rgba(255, 255, 255, 0.15);
+
+  /* ---- TYPOGRAPHY ---- */
+  --ogs-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'Helvetica Neue', Arial, sans-serif;
+  --ogs-font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+
+  /* Type scale (rem-based; 1rem = 16px) */
+  --ogs-text-xs:   0.75rem;    /* 12px — labels, eyebrows */
+  --ogs-text-sm:   0.875rem;   /* 14px — nav, small body */
+  --ogs-text-base: 1rem;       /* 16px — body */
+  --ogs-text-lg:   1.125rem;   /* 18px — lead paragraph */
+  --ogs-text-xl:   1.25rem;    /* 20px — h4 */
+  --ogs-text-2xl:  1.5rem;     /* 24px — h3 mobile */
+  --ogs-text-3xl:  2rem;       /* 32px — h2 mobile, h3 desktop */
+  --ogs-text-4xl:  2.5rem;     /* 40px — h1 mobile, h2 desktop */
+  --ogs-text-5xl:  3.5rem;     /* 56px — h1 desktop */
+
+  /* ---- SPACING ---- */
+  --ogs-space-xs:  0.25rem;    /* 4px  */
+  --ogs-space-sm:  0.5rem;     /* 8px  */
+  --ogs-space-md:  1rem;       /* 16px */
+  --ogs-space-lg:  1.5rem;     /* 24px */
+  --ogs-space-xl:  2rem;       /* 32px */
+  --ogs-space-2xl: 3rem;       /* 48px */
+  --ogs-space-3xl: 4rem;       /* 64px */
+  --ogs-space-4xl: 6rem;       /* 96px */
+
+  /* ---- RADIUS ---- */
+  --ogs-radius-sm:   0.5rem;    /* 8px  — small chips, icons */
+  --ogs-radius-md:   0.75rem;   /* 12px — buttons, inputs */
+  --ogs-radius-lg:   1rem;      /* 16px — cards */
+  --ogs-radius-xl:   1.25rem;   /* 20px — CTA banner */
+  --ogs-radius-full: 9999px;    /* pills, nav, dots */
+
+  /* ---- SHADOWS ---- */
+  --ogs-shadow-sm:   0 1px 2px  rgba(0, 0, 0, 0.30);
+  --ogs-shadow-md:   0 4px 12px rgba(0, 0, 0, 0.40);
+  --ogs-shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.50);
+  --ogs-shadow-glow: 0 0 20px  var(--ogs-accent-glow);
+
+  /* ---- BLUR (glassmorphism) ---- */
+  --ogs-blur-sm: 8px;
+  --ogs-blur-md: 16px;
+  --ogs-blur-lg: 24px;
+
+  /* ---- MOTION ---- */
+  --ogs-transition-fast: 150ms ease;
+  --ogs-transition-base: 250ms ease;
+  --ogs-transition-slow: 400ms ease;
+
+  /* ---- SEMANTIC ROLES ---- */
+  --fg-1:        var(--ogs-text-primary);
+  --fg-2:        var(--ogs-text-secondary);
+  --fg-muted:    var(--ogs-text-muted);
+  --fg-accent:   var(--ogs-accent);
+
+  --bg-1:        var(--ogs-bg-primary);
+  --bg-2:        var(--ogs-bg-secondary);
+  --bg-surface:  var(--ogs-bg-glass);
+
+  --link:        var(--ogs-accent-light);
+  --link-hover:  var(--ogs-accent);
+}
+
+/* ============================================
+   SEMANTIC ELEMENT STYLES
+   ============================================ */
+
+.ogs-body {
+  font-family: var(--ogs-font-sans);
+  font-size: var(--ogs-text-base);
+  line-height: 1.6;
+  color: var(--fg-1);
+  background: var(--bg-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display — used for hero headlines */
+.ogs-display {
+  font-family: var(--ogs-font-sans);
+  font-weight: 700;
+  font-size: var(--ogs-text-5xl);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+}
+
+.ogs-h1 { font-size: var(--ogs-text-4xl); font-weight: 700; line-height: 1.2; }
+.ogs-h2 { font-size: var(--ogs-text-3xl); font-weight: 700; line-height: 1.2; }
+.ogs-h3 { font-size: var(--ogs-text-2xl); font-weight: 700; line-height: 1.2; }
+.ogs-h4 { font-size: var(--ogs-text-xl);  font-weight: 700; line-height: 1.3; }
+
+/* Eyebrow — small caps label above section titles */
+.ogs-eyebrow {
+  display: inline-block;
+  font-size: var(--ogs-text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ogs-accent);
+}
+
+.ogs-lead {
+  font-size: var(--ogs-text-lg);
+  color: var(--fg-2);
+  line-height: 1.6;
+}
+
+.ogs-p {
+  font-size: var(--ogs-text-base);
+  color: var(--fg-1);
+  line-height: 1.6;
+}
+
+.ogs-small {
+  font-size: var(--ogs-text-sm);
+  color: var(--fg-2);
+}
+
+.ogs-micro {
+  font-size: var(--ogs-text-xs);
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.ogs-highlight {
+  color: var(--ogs-accent);
+}
+
+.ogs-mono {
+  font-family: var(--ogs-font-mono);
+  font-size: 0.95em;
+}

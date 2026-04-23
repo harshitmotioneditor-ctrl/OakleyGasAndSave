@@ -1,0 +1,65 @@
+/* Shared base for all design system preview cards */
+@import url('../colors_and_type.css');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--ogs-font-sans);
+  color: var(--ogs-text-primary);
+  background: var(--ogs-bg-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row { display: flex; gap: 14px; flex-wrap: wrap; align-items: stretch; }
+.row--tight { gap: 8px; }
+.grid { display: grid; gap: 14px; }
+
+.swatch {
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 96px;
+  border: 1px solid var(--ogs-border-glass);
+  flex: 1 1 0;
+  min-width: 120px;
+}
+.swatch__name { font-size: 13px; font-weight: 700; letter-spacing: 0; }
+.swatch__value {
+  font-family: var(--ogs-font-mono);
+  font-size: 11px;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+.tok {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--ogs-border-glass);
+  border-radius: 12px;
+  background: var(--ogs-bg-glass);
+  font-size: 13px;
+}
+.tok__mono { font-family: var(--ogs-font-mono); font-size: 12px; color: var(--ogs-text-muted); }
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ogs-text-muted);
+  font-weight: 600;
+}
