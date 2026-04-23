@@ -641,6 +641,13 @@ h1.ed-display,
   .promo-deal__icon { margin: 0 auto; }
 }
 
+/* ---------- DIRECTIONS GRID ---------- */
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-xl);
+}
+
 /* ---------- MAP / CONTACT ---------- */
 .contact-grid {
   display: grid;
@@ -827,4 +834,233 @@ h1.ed-display,
 }
 @media (max-width: 900px) {
   .hero-stage { position: relative; width: 100%; max-width: 420px; height: 340px; margin: var(--space-xl) auto 0; right: 0; bottom: 0; }
+}
+@media (max-width: 600px) {
+  .hero-stage { max-width: 300px; height: 260px; }
+}
+@media (max-width: 359px) {
+  .hero-stage { max-width: 240px; height: 200px; }
+}
+
+/* ========= ELEVATED — COMPREHENSIVE RESPONSIVE ========= */
+
+/* --- Ultra-small phones (<360px) --- */
+@media (max-width: 359px) {
+  .page-hero {
+    min-height: 45vh;
+    padding: calc(60px + var(--space-xl)) 0 var(--space-xl);
+  }
+  .page-hero h1 {
+    font-size: 1.75rem;
+    max-width: 100%;
+  }
+  .page-hero p.lead {
+    font-size: 0.9rem;
+  }
+  .dim-card {
+    padding: var(--space-lg);
+  }
+  .price-board {
+    grid-template-columns: 1fr;
+  }
+  .price-board__price {
+    font-size: 2.25rem;
+  }
+  .svc-card {
+    padding: var(--space-lg);
+  }
+  .svc-card__title {
+    font-size: var(--text-lg);
+  }
+  .prod-grid {
+    grid-template-columns: 1fr;
+  }
+  .prod-card__name {
+    font-size: var(--text-base);
+  }
+  .promo-deal {
+    padding: var(--space-lg);
+  }
+  .promo-deal__title {
+    font-size: 1.2rem;
+  }
+  .tier-card {
+    padding: var(--space-xl) var(--space-md);
+  }
+  .contact-map {
+    aspect-ratio: 4 / 3;
+  }
+  .contact-info__block {
+    grid-template-columns: 44px 1fr;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+  .contact-info__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .contact-info__value {
+    font-size: var(--text-base);
+  }
+  .hours-table td {
+    padding: var(--space-sm) 0;
+    font-size: var(--text-xs);
+  }
+}
+
+/* --- Small phones (360–479px) --- */
+@media (min-width: 360px) and (max-width: 479px) {
+  .page-hero {
+    min-height: 48vh;
+    padding: calc(65px + var(--space-xl)) 0 var(--space-xl);
+  }
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  .price-board {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  .price-board__tile {
+    padding: var(--space-lg);
+  }
+  .prod-grid {
+    gap: var(--space-md);
+  }
+  .dim-card {
+    padding: var(--space-lg);
+  }
+  .contact-map {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* --- Mid phones (480–767px) --- */
+@media (min-width: 480px) and (max-width: 767px) {
+  .page-hero {
+    min-height: 50vh;
+  }
+  .page-hero h1 {
+    font-size: clamp(2rem, 5.5vw, 2.75rem);
+  }
+  .price-board {
+    grid-template-columns: 1fr 1fr;
+  }
+  .svc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .prod-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-map {
+    aspect-ratio: 4 / 3;
+  }
+  .contact-info__block {
+    padding: var(--space-lg);
+  }
+}
+
+/* --- Tablet (768–899px) --- */
+@media (min-width: 768px) and (max-width: 899px) {
+  .page-hero__inner {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  .price-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .prod-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  .contact-map {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* --- Large tablet / small laptop (900–1099px) --- */
+@media (min-width: 900px) and (max-width: 1099px) {
+  .svc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prod-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .page-hero__icon svg {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+/* --- Ultra-wide (1920+) --- */
+@media (min-width: 1920px) {
+  .page-hero {
+    min-height: 50vh;
+  }
+  .page-hero h1 {
+    font-size: 5.5rem;
+  }
+  .price-board {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .svc-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .prod-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .tier-card--featured {
+    transform: scale(1.06);
+  }
+}
+
+/* --- Touch devices — disable hover transforms on cards --- */
+@media (hover: none) and (pointer: coarse) {
+  .dim-card:hover,
+  .svc-card:hover,
+  .prod-card:hover,
+  .tier-card:hover,
+  .promo-deal:hover {
+    transform: none;
+  }
+  .tier-card--featured:hover {
+    transform: scale(1.04);
+  }
+  .svc-card:hover::before {
+    transform: none;
+  }
+  .amenity-rail__chip {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* --- Landscape mobile --- */
+@media (max-width: 900px) and (orientation: landscape) {
+  .page-hero {
+    min-height: auto;
+    padding: calc(60px + var(--space-xl)) 0 var(--space-xl);
+  }
+  .page-hero__inner {
+    grid-template-columns: 1.5fr 0.5fr;
+  }
+  .page-hero__icon svg {
+    max-width: 140px;
+    height: auto;
+  }
+  .contact-map {
+    aspect-ratio: 16 / 9;
+  }
 }

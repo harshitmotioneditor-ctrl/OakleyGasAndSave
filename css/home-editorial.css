@@ -483,3 +483,339 @@
   .ed-hero h1 { font-size: 3rem; line-height: 1; }
   .ed-display { font-size: 2rem; }
 }
+
+/* ========= HOME EDITORIAL — COMPREHENSIVE RESPONSIVE ========= */
+
+/* --- Ultra-small phones (<360px) --- */
+@media (max-width: 359px) {
+  .ed-hero {
+    min-height: 80vh;
+    padding: calc(60px + var(--space-xl)) 0 var(--space-2xl);
+  }
+  .ed-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+  .ed-hero__sub {
+    font-size: 0.95rem;
+  }
+  .ed-hero__art {
+    width: 140%;
+    right: -30%;
+    opacity: 0.15;
+  }
+  .ed-hero__meta {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 10px;
+  }
+  .ed-section {
+    padding: var(--space-2xl) 0;
+  }
+  .ed-section--tight {
+    padding: var(--space-xl) 0;
+  }
+  .ed-display {
+    font-size: 1.65rem;
+    max-width: 100%;
+  }
+  .ed-lead {
+    font-size: 0.9rem;
+  }
+  .ed-index__row {
+    grid-template-columns: 28px 1fr 28px;
+    padding: var(--space-md) var(--space-xs);
+    gap: var(--space-sm);
+  }
+  .ed-index__title {
+    font-size: 1.1rem;
+  }
+  .ed-index__arrow {
+    width: 28px;
+    height: 28px;
+  }
+  .ed-split__art {
+    aspect-ratio: 3 / 4;
+    min-height: 220px;
+  }
+  .ed-stat-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+  .ed-stat__num {
+    font-size: 1.25rem;
+  }
+  .ed-stat__label {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+  .ed-feature {
+    aspect-ratio: 3 / 5;
+  }
+  .ed-feature__price {
+    font-size: 2.5rem;
+  }
+  .ed-feature__title {
+    font-size: 1.1rem;
+  }
+  .ed-feature__inner {
+    max-width: 100%;
+    padding: var(--space-lg);
+  }
+  .ed-trip__card {
+    min-height: 240px;
+  }
+  .ed-trip__title {
+    font-size: 1.15rem;
+  }
+  .ed-trust {
+    padding: var(--space-lg);
+    gap: var(--space-md);
+    grid-template-columns: 1fr 1fr;
+  }
+  .ed-trust__num {
+    font-size: 1.5rem;
+  }
+  .ed-quote__text {
+    font-size: 1rem;
+  }
+  .ed-final {
+    padding: var(--space-xl);
+  }
+  .ed-final h2 {
+    font-size: 1.65rem;
+  }
+  .ed-final__ctas {
+    flex-direction: column;
+  }
+  .ed-final__ctas .btn {
+    width: 100%;
+  }
+  .ed-ticker__item {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* --- Small phones (360–479px) --- */
+@media (min-width: 360px) and (max-width: 479px) {
+  .ed-hero {
+    min-height: 85vh;
+    padding: calc(65px + var(--space-2xl)) 0 var(--space-3xl);
+  }
+  .ed-hero h1 {
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+  .ed-hero__art {
+    width: 130%;
+    right: -25%;
+    opacity: 0.2;
+  }
+  .ed-hero__meta {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .ed-section {
+    padding: var(--space-3xl) 0;
+  }
+  .ed-display {
+    font-size: 1.85rem;
+  }
+  .ed-index__row {
+    grid-template-columns: 36px 1fr 32px;
+    gap: var(--space-sm);
+  }
+  .ed-index__title {
+    font-size: 1.2rem;
+  }
+  .ed-feature {
+    aspect-ratio: 3 / 4;
+  }
+  .ed-feature__inner {
+    max-width: 100%;
+  }
+  .ed-trip__card {
+    min-height: 260px;
+  }
+  .ed-trust {
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+  }
+  .ed-final__ctas {
+    flex-direction: column;
+  }
+  .ed-final__ctas .btn {
+    width: 100%;
+  }
+}
+
+/* --- Mid phones (480–767px) --- */
+@media (min-width: 480px) and (max-width: 767px) {
+  .ed-hero {
+    min-height: 85vh;
+  }
+  .ed-hero__meta {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  .ed-feature {
+    aspect-ratio: 4 / 5;
+  }
+  .ed-feature__inner {
+    max-width: 85%;
+  }
+  .ed-trip {
+    grid-template-columns: 1fr;
+  }
+  .ed-trip__card {
+    min-height: 280px;
+  }
+  .ed-trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ed-quote {
+    grid-template-columns: 1fr;
+  }
+  .ed-split__art {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* --- Tablet (768–899px) --- */
+@media (min-width: 768px) and (max-width: 899px) {
+  .ed-hero {
+    min-height: 75vh;
+  }
+  .ed-head {
+    grid-template-columns: 1fr;
+  }
+  .ed-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .ed-split__art {
+    aspect-ratio: 16 / 9;
+  }
+  .ed-trip {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .ed-trip__card:first-child {
+    grid-column: 1 / -1;
+  }
+  .ed-trust {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .ed-trust__item {
+    border-left: 1px solid var(--border-glass);
+    padding-left: var(--space-md);
+  }
+  .ed-trust__item:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
+  .ed-quote {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ed-quote__item:last-child {
+    grid-column: 1 / -1;
+  }
+  .ed-feature {
+    aspect-ratio: 16 / 9;
+  }
+  .ed-feature__inner {
+    max-width: 65%;
+  }
+}
+
+/* --- Large tablet / small laptop (900–1099px) --- */
+@media (min-width: 900px) and (max-width: 1099px) {
+  .ed-hero {
+    min-height: 80vh;
+  }
+  .ed-trip {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 320px;
+  }
+}
+
+/* --- Large desktop (1440–1919px) --- */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .ed-hero h1 {
+    font-size: 5.5rem;
+  }
+  .ed-trip {
+    grid-template-rows: 420px;
+  }
+}
+
+/* --- Ultra-wide (1920+) --- */
+@media (min-width: 1920px) {
+  .ed-hero {
+    min-height: 80vh;
+  }
+  .ed-hero h1 {
+    font-size: 6.5rem;
+  }
+  .ed-display {
+    font-size: 4.5rem;
+    max-width: 24ch;
+  }
+  .ed-hero__art {
+    max-width: 1000px;
+  }
+  .ed-trip {
+    grid-template-rows: 460px;
+  }
+  .ed-feature {
+    aspect-ratio: 21 / 7;
+  }
+  .ed-final {
+    padding: 5rem;
+  }
+  .ed-final h2 {
+    font-size: 4.5rem;
+  }
+  .ed-trust__num {
+    font-size: 3.5rem;
+  }
+}
+
+/* --- Landscape mobile --- */
+@media (max-width: 900px) and (orientation: landscape) {
+  .ed-hero {
+    min-height: auto;
+    padding: calc(60px + var(--space-xl)) 0 var(--space-xl);
+  }
+  .ed-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  .ed-hero__art {
+    opacity: 0.15;
+  }
+  .ed-trip__card {
+    min-height: 220px;
+  }
+  .ed-feature {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* --- Touch devices --- */
+@media (hover: none) and (pointer: coarse) {
+  .ed-index__row:hover {
+    background: transparent;
+    padding-left: var(--space-md);
+  }
+  .ed-index__row:active {
+    background: linear-gradient(90deg, rgba(245,158,11,0.06), transparent 70%);
+  }
+  .ed-trip__card:hover {
+    transform: none;
+  }
+  .ed-hero__art {
+    animation: none;
+  }
+}
