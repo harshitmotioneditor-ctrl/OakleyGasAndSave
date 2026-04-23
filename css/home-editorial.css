@@ -20,17 +20,16 @@
   overflow: hidden;
   isolation: isolate;
 }
-/* Layered gradient "forecourt at dusk" — deep blue-black sky, amber canopy glow, asphalt foreground */
+/* Photo background with dark overlay */
 .ed-hero__bg {
   position: absolute; inset: 0; z-index: -2;
   background:
-    /* Top: night sky */
     linear-gradient(180deg,
-      #0a0d14 0%,
-      #0f1419 30%,
-      #141921 55%,
-      #0d0f14 100%),
-    #0a0d14;
+      rgba(10,13,20,0.7) 0%,
+      rgba(15,20,25,0.6) 30%,
+      rgba(20,25,33,0.65) 55%,
+      rgba(13,15,20,0.9) 100%),
+    url('../images/station-exterior-night.png') center/cover no-repeat;
 }
 /* Amber canopy glow — two offset radial glows simulating sodium lights */
 .ed-hero__scrim {
@@ -257,7 +256,7 @@
   .ed-split--flip .ed-split__art { order: 2; }
 }
 
-/* Art card — CSS-only canvas holding an SVG illustration */
+/* Art card — canvas holding an SVG or photo illustration */
 .ed-split__art {
   position: relative;
   aspect-ratio: 4 / 5;
@@ -271,6 +270,17 @@
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   display: block;
+}
+/* Photo-based art card */
+.ed-split__art--photo {
+  background-size: cover;
+  background-position: center;
+}
+.ed-split__art--photo::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,15,20,0.15) 0%, rgba(13,15,20,0.55) 100%);
+  z-index: 1;
 }
 .ed-split__tag {
   position: absolute;
@@ -393,6 +403,17 @@
   width: 100%; height: 100%;
   opacity: 0.55;
   pointer-events: none;
+}
+/* Photo-based triptych card backgrounds */
+.ed-trip__card--photo {
+  background-size: cover;
+  background-position: center;
+}
+.ed-trip__card--photo .ed-trip__art {
+  display: none;
+}
+.ed-trip__card--photo .ed-trip__content {
+  background: linear-gradient(180deg, transparent 20%, rgba(13,15,20,0.88) 100%);
 }
 .ed-trip__content {
   position: absolute; inset: 0;

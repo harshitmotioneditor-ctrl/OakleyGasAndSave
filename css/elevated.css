@@ -250,6 +250,17 @@ h1.ed-display,
     radial-gradient(ellipse 50% 40% at 85% 65%, rgba(20,184,166,0.15) 0%, transparent 55%),
     linear-gradient(165deg, #0a0d14 0%, #141921 45%, #0d0f14 100%);
 }
+/* Photo-based hero backgrounds per page */
+[data-page="fuel"] .page-hero__bg {
+  background:
+    linear-gradient(180deg, rgba(10,13,20,0.65) 0%, rgba(13,15,20,0.7) 50%, rgba(13,15,20,0.92) 100%),
+    url('../images/station-exterior-day.png') center/cover no-repeat;
+}
+[data-page="store"] .page-hero__bg {
+  background:
+    linear-gradient(180deg, rgba(10,13,20,0.6) 0%, rgba(13,15,20,0.65) 50%, rgba(13,15,20,0.9) 100%),
+    url('../images/store-interior-wide.png') center/cover no-repeat;
+}
 .page-hero__bg--teal {
   background:
     radial-gradient(ellipse 65% 50% at 80% 30%, rgba(20,184,166,0.22) 0%, transparent 55%),
