@@ -502,28 +502,31 @@ h5 { font-size: var(--text-lg); }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 28px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   background: none;
   border: none;
   cursor: pointer;
   z-index: calc(var(--z-overlay) + 1);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle span {
   display: block;
   position: absolute;
-  width: 100%;
+  left: 50%;
+  width: 24px;
+  margin-left: -12px;
   height: 2px;
-  background: var(--text-primary);
+  background: #ffffff;
   border-radius: 2px;
   transition: transform 0.35s cubic-bezier(.22,1,.36,1), opacity 0.25s ease, top 0.35s cubic-bezier(.22,1,.36,1);
   transform-origin: center;
 }
-.nav-toggle span:nth-child(1) { top: 3px; }
-.nav-toggle span:nth-child(2) { top: 11px; }
-.nav-toggle span:nth-child(3) { top: 19px; }
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 21px; }
+.nav-toggle span:nth-child(3) { top: 29px; }
 
 @media (min-width: 768px) {
   .nav-toggle {
@@ -593,7 +596,7 @@ body.nav-open {
 }
 
 body.nav-open .nav-toggle span:nth-child(1) {
-  top: 11px;
+  top: 21px;
   transform: rotate(45deg);
 }
 
@@ -603,7 +606,7 @@ body.nav-open .nav-toggle span:nth-child(2) {
 }
 
 body.nav-open .nav-toggle span:nth-child(3) {
-  top: 11px;
+  top: 21px;
   transform: rotate(-45deg);
 }
 
@@ -1688,9 +1691,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   }
 
   .nav-toggle {
-    min-width: 44px;
-    min-height: 44px;
-    justify-content: center;
+    /* already 44x44, no override needed */
   }
 
   .footer-links a {
