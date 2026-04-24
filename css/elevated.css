@@ -261,6 +261,16 @@ h1.ed-display,
     linear-gradient(180deg, rgba(10,13,20,0.6) 0%, rgba(13,15,20,0.65) 50%, rgba(13,15,20,0.9) 100%),
     url('../images/store-interior-wide.png') center/cover no-repeat;
 }
+[data-page="deals"] .page-hero__bg--teal {
+  background:
+    linear-gradient(180deg, rgba(10,13,20,0.55) 0%, rgba(13,15,20,0.65) 50%, rgba(13,15,20,0.92) 100%),
+    url('../images/deals-hero.png') center/cover no-repeat;
+}
+[data-page="contact"] .page-hero__bg {
+  background:
+    linear-gradient(180deg, rgba(10,13,20,0.6) 0%, rgba(13,15,20,0.7) 50%, rgba(13,15,20,0.92) 100%),
+    url('../images/contact-hero.png') center/cover no-repeat;
+}
 .page-hero__bg--teal {
   background:
     radial-gradient(ellipse 65% 50% at 80% 30%, rgba(20,184,166,0.22) 0%, transparent 55%),
