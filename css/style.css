@@ -497,11 +497,14 @@ h5 { font-size: var(--text-lg); }
 
 /* ---- Hamburger ---- */
 .nav-toggle {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  align-items: center;
   width: 28px;
-  padding: 4px 0;
+  height: 24px;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
@@ -510,13 +513,17 @@ h5 { font-size: var(--text-lg); }
 
 .nav-toggle span {
   display: block;
+  position: absolute;
   width: 100%;
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: all var(--transition-base);
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1), opacity 0.25s ease, top 0.35s cubic-bezier(.22,1,.36,1);
   transform-origin: center;
 }
+.nav-toggle span:nth-child(1) { top: 3px; }
+.nav-toggle span:nth-child(2) { top: 11px; }
+.nav-toggle span:nth-child(3) { top: 19px; }
 
 @media (min-width: 768px) {
   .nav-toggle {
@@ -586,15 +593,18 @@ body.nav-open {
 }
 
 body.nav-open .nav-toggle span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  top: 11px;
+  transform: rotate(45deg);
 }
 
 body.nav-open .nav-toggle span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 body.nav-open .nav-toggle span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  top: 11px;
+  transform: rotate(-45deg);
 }
 
 /* ---- Tablet nav adjustments (768-1023) ---- */
