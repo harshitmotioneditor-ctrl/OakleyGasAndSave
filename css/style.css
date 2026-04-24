@@ -594,6 +594,9 @@ h5 { font-size: var(--text-lg); }
 body.nav-open {
   overflow: hidden;
 }
+body.nav-open .nav {
+  z-index: calc(var(--z-overlay) + 2);
+}
 
 body.nav-open .nav-toggle span:nth-child(1) {
   top: 21px;
