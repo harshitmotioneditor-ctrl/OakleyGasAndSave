@@ -120,7 +120,7 @@
       </div>\
       <div class="footer-bottom">\
         <p>&copy; 2026 OakleyGasAndSave. All rights reserved.</p>\
-        <p>Oakley, CA &middot; Near Highway 4</p>\
+        <p><a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms-of-service.html">Terms of Service</a> &middot; Oakley, CA &middot; Near Highway 4</p>\
       </div>\
     </div>';
   }

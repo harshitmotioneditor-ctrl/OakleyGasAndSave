@@ -1211,6 +1211,95 @@ h1.ed-display,
   }
 }
 
+/* ---------- LEGAL PAGES — Privacy & Terms ---------- */
+.page-hero--compact {
+  min-height: 38vh;
+  padding: calc(80px + var(--space-2xl)) 0 var(--space-xl);
+}
+@media (max-width: 767px) {
+  .page-hero--compact { min-height: 32vh; padding: calc(70px + var(--space-xl)) 0 var(--space-md); }
+}
+.legal-content {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.legal-content h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.legal-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+.legal-content p {
+  margin-bottom: var(--space-md);
+}
+.legal-content ul,
+.legal-content ol {
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+.legal-content li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.65;
+}
+.legal-content li strong {
+  color: var(--text-primary);
+}
+.legal-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+.legal-content a:hover {
+  color: var(--teal-bright);
+}
+.legal-effective {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 999px;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.2);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: var(--space-2xl);
+}
+.legal-contact {
+  margin-top: var(--space-lg);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.legal-contact p {
+  margin-bottom: var(--space-sm);
+}
+.legal-contact p:last-child {
+  margin-bottom: 0;
+}
+
 /* --- Landscape mobile --- */
 @media (max-width: 900px) and (orientation: landscape) {
   .page-hero {
