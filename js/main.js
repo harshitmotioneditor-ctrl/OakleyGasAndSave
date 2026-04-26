@@ -187,7 +187,7 @@
       }, null);
 
       // Product icons
-      var prodIcons = [icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag, icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag];
+      var prodIcons = [icons.i3Coffee, icons.i3Can, icons.i3Snack, icons.i3Bag, icons.i3DarkRoast, icons.i3Soda, icons.i3Jerky, icons.i3Milk];
       for (var pi = 0; pi < prodIcons.length; pi++) {
         injectIcon('prod-icon-' + pi, prodIcons[pi], 130);
       }

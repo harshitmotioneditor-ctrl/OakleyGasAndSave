@@ -366,6 +366,149 @@ function i3Road(size = 120) {
   return i3Wrap(id, size, inner, false);
 }
 
+// ──────────────────────────────────────────────────────────────
+// 12. Dark Roast – Travel mug with lid
+// ──────────────────────────────────────────────────────────────
+function i3DarkRoast(size = 120) {
+  const id = 'i3darkroast';
+  const inner = `
+  <g opacity="0.45" stroke="#ffffff" stroke-linecap="round" fill="none" stroke-width="1.2">
+    <path d="M54 28 Q 50 20 56 14"/>
+    <path d="M64 26 Q 68 18 62 10"/>
+  </g>
+  <ellipse cx="60" cy="104" rx="24" ry="4" fill="#0a0d14" opacity="0.6"/>
+  <g filter="url(#${id}-drop)">
+    <!-- Mug body -->
+    <path d="M38 42 L 42 96 Q 42 102 50 102 L 70 102 Q 78 102 78 96 L 82 42 Z" fill="url(#${id}-dark)"/>
+    <!-- Dark roast band -->
+    <rect x="40" y="56" width="40" height="20" rx="1" fill="#1a0e06"/>
+    <text x="60" y="69" text-anchor="middle" font-size="6.5" font-weight="900" fill="#d97706" letter-spacing="1.5">DARK</text>
+    <text x="60" y="75" text-anchor="middle" font-size="3.5" font-weight="700" fill="#b45309" letter-spacing="0.8">ROAST</text>
+    <!-- Lid -->
+    <rect x="36" y="36" width="48" height="8" rx="3" fill="#2a1a0a"/>
+    <rect x="36" y="36" width="48" height="3" rx="3" fill="url(#${id}-glass)" opacity="0.4"/>
+    <!-- Lid top cap -->
+    <rect x="44" y="32" width="32" height="6" rx="2" fill="#3d2210"/>
+    <rect x="44" y="32" width="32" height="2" rx="2" fill="url(#${id}-glass)" opacity="0.35"/>
+    <!-- Sip hole -->
+    <ellipse cx="60" cy="34" rx="5" ry="1.5" fill="#0d0f14"/>
+    <!-- Sleeve texture -->
+    <rect x="42" y="80" width="36" height="14" rx="1" fill="#3d2210" opacity="0.6"/>
+    <rect x="42" y="80" width="36" height="2" rx="1" fill="url(#${id}-glass)" opacity="0.2"/>
+    <!-- Body shine -->
+    <path d="M40 44 L 42 96 Q 42 100 46 100 L 48 100 L 44 44 Z" fill="url(#${id}-glass)" opacity="0.12"/>
+    <!-- Bottom rim -->
+    <ellipse cx="60" cy="102" rx="18" ry="3" fill="#0d0f14" opacity="0.4"/>
+  </g>`;
+  return i3Wrap(id, size, inner);
+}
+
+// ──────────────────────────────────────────────────────────────
+// 13. Soda – Fountain cup with straw
+// ──────────────────────────────────────────────────────────────
+function i3Soda(size = 120) {
+  const id = 'i3soda';
+  const inner = `
+  <ellipse cx="60" cy="106" rx="24" ry="4" fill="#0a0d14" opacity="0.6"/>
+  <g filter="url(#${id}-drop)">
+    <!-- Cup body (tapered) -->
+    <path d="M40 34 L 44 98 Q 44 102 50 102 L 70 102 Q 76 102 76 98 L 80 34 Z" fill="url(#${id}-teal)"/>
+    <!-- Cup shine -->
+    <path d="M42 36 L 46 98 Q 46 100 48 100 L 50 100 L 46 36 Z" fill="url(#${id}-glass)" opacity="0.3"/>
+    <!-- Dark side -->
+    <path d="M76 36 L 80 34 L 76 98 Q 76 102 72 102 L 74 102 Q 76 102 76 98 Z" fill="#000" opacity="0.2"/>
+    <!-- Brand band -->
+    <rect x="42" y="52" width="36" height="22" rx="1" fill="#0d0f14" opacity="0.25"/>
+    <text x="60" y="66" text-anchor="middle" font-size="8" font-weight="900" fill="#ffffff" letter-spacing="1">SODA</text>
+    <!-- Condensation drops -->
+    <circle cx="48" cy="78" r="1.5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="54" cy="88" r="1" fill="#ffffff" opacity="0.4"/>
+    <circle cx="72" cy="72" r="1" fill="#ffffff" opacity="0.35"/>
+    <!-- Lid -->
+    <ellipse cx="60" cy="34" rx="22" ry="5" fill="#e2e8f0"/>
+    <ellipse cx="60" cy="34" rx="22" ry="5" fill="#000" opacity="0.1"/>
+    <ellipse cx="60" cy="33" rx="19" ry="4" fill="#f1f5f9"/>
+    <ellipse cx="60" cy="33" rx="8" ry="2" fill="#cbd5e1"/>
+    <!-- Straw -->
+    <rect x="63" y="6" width="3.5" height="30" rx="1" fill="#ef4444"/>
+    <rect x="63" y="6" width="1.2" height="30" rx="0.5" fill="url(#${id}-glass)" opacity="0.4"/>
+    <!-- Straw bend -->
+    <path d="M64.5 6 Q 58 4 56 8" stroke="#ef4444" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M64 6 Q 59 5 57 8" stroke="url(#${id}-glass)" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>`;
+  return i3Wrap(id, size, inner);
+}
+
+// ──────────────────────────────────────────────────────────────
+// 14. Jerky – Protein jerky pouch
+// ──────────────────────────────────────────────────────────────
+function i3Jerky(size = 120) {
+  const id = 'i3jerky';
+  const inner = `
+  <ellipse cx="60" cy="106" rx="26" ry="4" fill="#0a0d14" opacity="0.5"/>
+  <g filter="url(#${id}-drop)">
+    <!-- Pouch body -->
+    <path d="M34 28 L 86 28 L 84 98 Q 84 104 78 104 L 42 104 Q 36 104 36 98 Z" fill="#8b1a1a"/>
+    <!-- Top seal -->
+    <rect x="34" y="24" width="52" height="8" rx="2" fill="#6b1010"/>
+    <rect x="34" y="24" width="52" height="3" rx="2" fill="url(#${id}-glass)" opacity="0.3"/>
+    <!-- Tear notch -->
+    <path d="M84 28 L 88 28 L 86 32" fill="#6b1010" opacity="0.8"/>
+    <path d="M34 28 L 30 28 L 34 32" fill="#6b1010" opacity="0.8"/>
+    <!-- Body shine -->
+    <path d="M36 30 L 40 30 L 42 100 L 38 100 Z" fill="url(#${id}-glass)" opacity="0.2"/>
+    <!-- Label area -->
+    <rect x="40" y="42" width="40" height="36" rx="2" fill="#0d0f14" opacity="0.35"/>
+    <!-- Text -->
+    <text x="60" y="55" text-anchor="middle" font-size="7" font-weight="900" fill="#fbbf24" letter-spacing="1">JERKY</text>
+    <text x="60" y="63" text-anchor="middle" font-size="3.5" font-weight="600" fill="#fbbf24" opacity="0.7" letter-spacing="0.5">PROTEIN PACKED</text>
+    <!-- Weight badge -->
+    <rect x="48" y="68" width="24" height="6" rx="1" fill="url(#${id}-amber)" opacity="0.8"/>
+    <text x="60" y="73" text-anchor="middle" font-size="3.5" font-weight="800" fill="#0d0f14">3.5 OZ</text>
+    <!-- Bottom crinkle -->
+    <path d="M38 96 L 42 94 L 46 96 L 50 94 L 54 96 L 58 94 L 62 96 L 66 94 L 70 96 L 74 94 L 78 96 L 82 94" stroke="#0d0f14" fill="none" stroke-width="0.8" opacity="0.3"/>
+  </g>`;
+  return i3Wrap(id, size, inner);
+}
+
+// ──────────────────────────────────────────────────────────────
+// 15. Milk – Milk carton with bread loaf
+// ──────────────────────────────────────────────────────────────
+function i3Milk(size = 120) {
+  const id = 'i3milk';
+  const inner = `
+  <ellipse cx="60" cy="108" rx="36" ry="5" fill="#0a0d14" opacity="0.5"/>
+  <g filter="url(#${id}-drop)">
+    <!-- Milk carton body -->
+    <rect x="30" y="36" width="34" height="68" rx="3" fill="#f1f5f9"/>
+    <rect x="30" y="36" width="34" height="68" rx="3" fill="#000" opacity="0.04"/>
+    <!-- Carton top (gable) -->
+    <path d="M30 36 L 47 18 L 64 36 Z" fill="#e2e8f0"/>
+    <path d="M30 36 L 47 18 L 47 36 Z" fill="url(#${id}-glass)" opacity="0.3"/>
+    <!-- Blue stripe -->
+    <rect x="30" y="50" width="34" height="24" fill="#3b82f6" opacity="0.75"/>
+    <text x="47" y="65" text-anchor="middle" font-size="6" font-weight="900" fill="#ffffff" letter-spacing="0.5">MILK</text>
+    <text x="47" y="71" text-anchor="middle" font-size="3" font-weight="600" fill="#ffffff" opacity="0.8">WHOLE</text>
+    <!-- Carton shine -->
+    <rect x="32" y="38" width="5" height="64" rx="1" fill="url(#${id}-glass)" opacity="0.2"/>
+    <!-- Carton dark side -->
+    <rect x="59" y="36" width="5" height="68" rx="1" fill="#000" opacity="0.08"/>
+  </g>
+  <g filter="url(#${id}-drop)">
+    <!-- Bread loaf -->
+    <path d="M58 72 L 92 72 Q 96 72 96 76 L 96 100 Q 96 104 92 104 L 58 104 Q 54 104 54 100 L 54 76 Q 54 72 58 72 Z" fill="url(#${id}-amberR)"/>
+    <!-- Bread top dome -->
+    <path d="M56 72 Q 56 58 75 58 Q 94 58 94 72 Z" fill="#d4a24c"/>
+    <path d="M58 72 Q 58 60 75 60 Q 92 60 92 72 Z" fill="url(#${id}-glass)" opacity="0.25"/>
+    <!-- Bread score lines -->
+    <path d="M64 62 Q 75 58 86 62" stroke="#b8861a" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <path d="M66 66 Q 75 63 84 66" stroke="#b8861a" stroke-width="0.6" fill="none" opacity="0.4"/>
+    <!-- Bread side shine -->
+    <rect x="56" y="74" width="4" height="28" rx="1" fill="url(#${id}-glass)" opacity="0.15"/>
+  </g>`;
+  return i3Wrap(id, size, inner);
+}
+
 // ── Expose on window ─────────────────────────────────────────
 window.I3Icons = {
   i3Pump,
@@ -378,5 +521,9 @@ window.I3Icons = {
   i3Shield,
   i3Air,
   i3Card,
-  i3Road
+  i3Road,
+  i3DarkRoast,
+  i3Soda,
+  i3Jerky,
+  i3Milk
 };
