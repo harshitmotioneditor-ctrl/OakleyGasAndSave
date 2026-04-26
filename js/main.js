@@ -6,6 +6,32 @@
 (function () {
   'use strict';
 
+  // ========= WEBP DETECTION & IMAGE OPTIMIZATION =========
+  var supportsWebP = false;
+  (function detectWebP() {
+    var img = new Image();
+    img.onload = img.onerror = function () {
+      supportsWebP = img.height === 1;
+      if (supportsWebP) {
+        document.documentElement.classList.add('webp');
+        // Swap inline background-image .png → .webp
+        var els = document.querySelectorAll('[style*="background-image"]');
+        for (var i = 0; i < els.length; i++) {
+          var s = els[i].style.backgroundImage;
+          if (s.indexOf('.png') !== -1) {
+            els[i].style.backgroundImage = s.replace(/\.png/g, '.webp');
+          }
+        }
+        // Swap <img> src .png → .webp
+        var imgs = document.querySelectorAll('img[src$=".png"]');
+        for (var j = 0; j < imgs.length; j++) {
+          imgs[j].src = imgs[j].src.replace(/\.png$/, '.webp');
+        }
+      }
+    };
+    img.src = 'data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA';
+  })();
+
   // ========= SHARED HEADER & FOOTER =========
   var NAV_LINKS = [
     { href: 'index.html', label: 'Home', page: 'home' },
