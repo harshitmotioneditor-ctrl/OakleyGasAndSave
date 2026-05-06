@@ -1158,13 +1158,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-2xl);
-  margin-bottom: var(--space-2xl);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-2xl);
   }
 }
 
@@ -1180,7 +1181,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .footer-links a {
@@ -1197,10 +1198,10 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .footer-bottom {
   border-top: 1px solid var(--border-glass);
-  padding-top: var(--space-xl);
+  padding-top: var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   font-size: var(--text-xs);
   color: var(--text-muted);
 }
@@ -1209,6 +1210,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
+    gap: var(--space-md);
   }
 }
 
@@ -1526,7 +1528,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 
   .hero h1 {
@@ -1656,7 +1658,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 }
 
@@ -1701,5 +1703,34 @@ body.nav-open .nav-toggle span:nth-child(3) {
     min-height: 40px;
     display: flex;
     align-items: center;
+  }
+}
+
+/* ========= FOOTER MOBILE REFINEMENTS ========= */
+@media (max-width: 479px) {
+  .footer {
+    padding: var(--space-2xl) 0 var(--space-lg);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .footer-brand p {
+    max-width: 100%;
+  }
+  .footer h5 {
+    margin-bottom: var(--space-xs);
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: var(--space-md);
+    align-items: center;
+  }
+  .footer-bottom p {
+    line-height: 1.8;
+    word-wrap: break-word;
+  }
+  .footer-contact {
+    line-height: 1.6;
   }
 }

@@ -123,6 +123,12 @@ h1.ed-display,
   margin: var(--space-3xl) 0;
   position: relative;
 }
+@media (max-width: 767px) {
+  .ed-rule { margin: var(--space-xl) 0; }
+}
+@media (max-width: 479px) {
+  .ed-rule { margin: var(--space-lg) 0; }
+}
 .ed-rule::before {
   content: '✦';
   position: absolute;
@@ -243,6 +249,12 @@ h1.ed-display,
   display: flex;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .page-hero {
+    min-height: auto;
+    padding: calc(70px + var(--space-xl)) 0 var(--space-xl);
+  }
+}
 .page-hero__bg {
   position: absolute; inset: 0; z-index: -2;
   background:
@@ -332,6 +344,14 @@ h1.ed-display,
   max-width: 50ch;
   line-height: 1.55;
 }
+@media (max-width: 479px) {
+  .page-hero .hero-ctas {
+    flex-direction: column;
+  }
+  .page-hero .hero-ctas .btn {
+    width: 100%;
+  }
+}
 .page-hero__icon {
   display: flex;
   justify-content: center;
@@ -372,6 +392,7 @@ h1.ed-display,
   gap: var(--space-lg);
   margin-top: var(--space-2xl);
 }
+@media (max-width: 767px) { .price-board { margin-top: var(--space-lg); gap: var(--space-md); } }
 .price-board__tile {
   position: relative;
   padding: var(--space-xl);
@@ -445,6 +466,8 @@ h1.ed-display,
 }
 @media (min-width: 700px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1100px) { .svc-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 767px) { .svc-grid { gap: var(--space-lg); margin-top: var(--space-lg); } }
+@media (max-width: 479px) { .svc-grid { gap: var(--space-md); margin-top: var(--space-md); } }
 .svc-card {
   position: relative;
   padding: var(--space-xl);
@@ -713,8 +736,11 @@ h1.ed-display,
 .promo-deal__fine { margin-top: var(--space-md); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
 .promo-deal__icon { flex-shrink: 0; }
 @media (max-width: 700px) {
-  .promo-deal { grid-template-columns: 1fr; }
+  .promo-deal { grid-template-columns: 1fr; padding: var(--space-lg); }
   .promo-deal__icon { margin: 0 auto; }
+}
+@media (max-width: 479px) {
+  .promo-deal { padding: var(--space-md); }
 }
 
 /* ---------- DIRECTIONS GRID ---------- */
@@ -723,6 +749,7 @@ h1.ed-display,
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-xl);
 }
+@media (max-width: 767px) { .directions-grid { gap: var(--space-md); } }
 
 /* ---------- MAP / CONTACT ---------- */
 .contact-grid {
@@ -732,6 +759,7 @@ h1.ed-display,
   margin-top: var(--space-2xl);
 }
 @media (min-width: 900px) { .contact-grid { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-4xl); } }
+@media (max-width: 767px) { .contact-grid { gap: var(--space-lg); margin-top: var(--space-lg); } }
 .contact-map {
   position: relative;
   aspect-ratio: 1 / 1;
@@ -1318,6 +1346,43 @@ h1.ed-display,
 }
 .legal-contact p:last-child {
   margin-bottom: 0;
+}
+
+/* ---------- MAP COMPASS & SCALE ---------- */
+.contact-map__north {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(13,15,20,0.7);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  z-index: 4;
+}
+.contact-map__scale {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  z-index: 4;
+}
+.contact-map__scale span {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: var(--text-muted);
 }
 
 /* --- Landscape mobile --- */

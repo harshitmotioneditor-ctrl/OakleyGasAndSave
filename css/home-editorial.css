@@ -20,6 +20,13 @@
   overflow: hidden;
   isolation: isolate;
 }
+@media (max-width: 767px) {
+  .ed-hero {
+    min-height: auto;
+    padding: calc(70px + var(--space-xl)) 0 var(--space-2xl);
+    align-items: center;
+  }
+}
 /* Photo background with dark overlay */
 .ed-hero__bg {
   position: absolute; inset: 0; z-index: -2;
@@ -147,6 +154,7 @@
   padding: var(--space-lg) 0;
   position: relative;
 }
+@media (max-width: 479px) { .ed-ticker { padding: var(--space-md) 0; } }
 .ed-ticker__track {
   display: flex; gap: var(--space-3xl);
   animation: ed-marquee 40s linear infinite;
@@ -170,6 +178,14 @@
 /* ---------- EDITORIAL SECTION SHELL ---------- */
 .ed-section { padding: var(--space-4xl) 0; }
 .ed-section--tight { padding: var(--space-3xl) 0; }
+@media (max-width: 767px) {
+  .ed-section { padding: var(--space-2xl) 0; }
+  .ed-section--tight { padding: var(--space-xl) 0; }
+}
+@media (max-width: 479px) {
+  .ed-section { padding: var(--space-xl) 0; }
+  .ed-section--tight { padding: var(--space-lg) 0; }
+}
 .ed-eyebrow {
   display: inline-flex; align-items: center; gap: var(--space-sm);
   font-size: var(--text-xs); letter-spacing: 0.18em;
@@ -177,6 +193,9 @@
   margin-bottom: var(--space-md);
 }
 .ed-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+@media (max-width: 479px) {
+  .ed-eyebrow { margin-bottom: var(--space-sm); }
+}
 .ed-display {
   font-size: clamp(2.25rem, 5vw, 4rem);
   font-weight: 800;
@@ -184,6 +203,9 @@
   line-height: 1.02;
   margin-bottom: var(--space-lg);
   max-width: 22ch;
+}
+@media (max-width: 767px) {
+  .ed-display { margin-bottom: var(--space-md); }
 }
 .ed-display em { font-style: italic; font-weight: 600; color: var(--accent); }
 .ed-lead {
@@ -204,6 +226,18 @@
 @media (min-width: 900px) {
   .ed-head { grid-template-columns: 1.3fr 1fr; }
   .ed-head__right { text-align: right; }
+}
+@media (max-width: 767px) {
+  .ed-head {
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+}
+@media (max-width: 479px) {
+  .ed-head {
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
 }
 
 /* ---------- OFFERINGS — BIG INDEX LIST ---------- */
@@ -264,6 +298,12 @@
   .ed-split { grid-template-columns: 1fr 1fr; gap: var(--space-4xl); }
   .ed-split--flip .ed-split__art { order: 2; }
 }
+@media (max-width: 767px) {
+  .ed-split { gap: var(--space-lg); }
+}
+@media (max-width: 479px) {
+  .ed-split { gap: var(--space-md); }
+}
 
 /* Art card — canvas holding an SVG or photo illustration */
 .ed-split__art {
@@ -274,6 +314,9 @@
   border: 1px solid var(--border-glass);
   box-shadow: var(--shadow-lg);
   isolation: isolate;
+}
+@media (max-width: 767px) {
+  .ed-split__art { aspect-ratio: 16 / 10; }
 }
 .ed-split__art svg {
   position: absolute; inset: 0;
@@ -314,6 +357,13 @@
   padding-top: var(--space-xl);
   margin-top: var(--space-xl);
   border-top: 1px solid var(--border-glass);
+}
+@media (max-width: 767px) {
+  .ed-stat-row {
+    gap: var(--space-sm);
+    padding-top: var(--space-md);
+    margin-top: var(--space-lg);
+  }
 }
 .ed-stat__num { font-size: clamp(1.75rem, 2.4vw, 2.25rem); font-weight: 800; color: var(--accent); line-height: 1; letter-spacing: -0.02em; }
 .ed-stat__label { font-size: var(--text-xs); color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: var(--space-xs); }
@@ -376,6 +426,7 @@
   grid-template-columns: 1fr;
   gap: var(--space-lg);
 }
+@media (max-width: 479px) { .ed-trip { gap: var(--space-md); } }
 @media (min-width: 900px) {
   .ed-trip { grid-template-columns: 1.2fr 1fr 1fr; grid-template-rows: 380px; }
 }
@@ -471,6 +522,7 @@
   gap: var(--space-xl);
 }
 @media (min-width: 900px) { .ed-quote { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 767px) { .ed-quote { gap: var(--space-md); } }
 .ed-quote__item { padding: var(--space-xl) 0; border-top: 1px solid var(--border-glass); }
 .ed-quote__stars { color: var(--accent); letter-spacing: 0.1em; font-size: var(--text-sm); margin-bottom: var(--space-md); }
 .ed-quote__text {
@@ -546,6 +598,15 @@
 .ed-final h2 em { font-style: italic; font-weight: 600; color: var(--accent); }
 .ed-final p { color: var(--text-secondary); max-width: 44ch; margin: 0 auto var(--space-xl); position: relative; }
 .ed-final__ctas { display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; position: relative; }
+@media (max-width: 767px) {
+  .ed-final { padding: var(--space-xl); }
+  .ed-final p { margin-bottom: var(--space-lg); }
+}
+@media (max-width: 479px) {
+  .ed-final { padding: var(--space-lg); }
+  .ed-final__ctas { flex-direction: column; }
+  .ed-final__ctas .btn { width: 100%; }
+}
 
 @media (max-width: 600px) {
   .ed-hero h1 { font-size: 3rem; line-height: 1; }
