@@ -109,7 +109,8 @@
 
     el.innerHTML = '\
     <div class="container">\
-      <div class="footer-grid">\
+      <!-- Desktop footer -->\
+      <div class="footer-grid footer-desktop">\
         <div class="footer-brand">\
           <a href="index.html" class="nav-logo" aria-label="OakleyGasAndSave Home">\
             <span class="logo-accent">O</span>akleyGasAndSave\
@@ -122,7 +123,7 @@
             <li><a href="index.html">Home</a></li>\
             <li><a href="fuel-services.html">Fuel &amp; Services</a></li>\
             <li><a href="store.html">Store</a></li>\
-            <li><a href="deals.html">Deals &amp; Rewards</a></li>\
+            <li><a href="deals.html">Deals</a></li>\
             <li><a href="contact.html">Visit Us</a></li>\
           </ul>\
         </div>\
@@ -144,7 +145,45 @@
           </address>\
         </div>\
       </div>\
-      <div class="footer-bottom">\
+      <!-- Mobile footer -->\
+      <div class="footer-mobile">\
+        <div class="footer-mobile__brand">\
+          <a href="index.html" class="nav-logo" aria-label="OakleyGasAndSave Home">\
+            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>\
+            <span class="logo-text"><span class="logo-accent">O</span>akleyGas<span class="logo-ampersand">&amp;</span>Save</span>\
+          </a>\
+          <p>Gas station &amp; convenience store in Oakley, CA.</p>\
+        </div>\
+        <nav class="footer-mobile__nav" aria-label="Footer navigation">\
+          <a href="index.html">Home</a>\
+          <a href="fuel-services.html">Fuel</a>\
+          <a href="store.html">Store</a>\
+          <a href="deals.html">Deals</a>\
+          <a href="contact.html">Visit Us</a>\
+        </nav>\
+        <div class="footer-mobile__info">\
+          <div class="footer-mobile__info-item">\
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>\
+            <span>123 Main St, Oakley, CA</span>\
+          </div>\
+          <div class="footer-mobile__info-item">\
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>\
+            <span>5 AM &ndash; 11 PM Daily</span>\
+          </div>\
+          <div class="footer-mobile__info-item">\
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>\
+            <a href="tel:+19250000000">(925) 000-0000</a>\
+          </div>\
+        </div>\
+        <div class="footer-mobile__legal">\
+          <a href="privacy-policy.html">Privacy</a>\
+          <span>&middot;</span>\
+          <a href="terms-of-service.html">Terms</a>\
+        </div>\
+        <p class="footer-mobile__copy">&copy; 2026 OakleyGasAndSave</p>\
+      </div>\
+      <!-- Desktop bottom -->\
+      <div class="footer-bottom footer-desktop">\
         <p>&copy; 2026 OakleyGasAndSave. All rights reserved.</p>\
         <p><a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms-of-service.html">Terms of Service</a> &middot; Oakley, CA &middot; Near Highway 4</p>\
       </div>\
